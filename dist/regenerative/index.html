@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Regenerative Medicine — Pure Renewal Concierge Medicine | Orlando, FL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@300;400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet" />
+    <style>:root{--bg:#08040F;--bg-mid:#0E0819;--bg-card:#120B1F;--purple:#6B21E8;--p2:#8B5CF6;--p3:#A78BFA;--mg:#E040FB;--w:#fff;--w70:rgba(255,255,255,.7);--w40:rgba(255,255,255,.4);--w15:rgba(255,255,255,.15);--w08:rgba(255,255,255,.08);--w04:rgba(255,255,255,.04);--D:'Bebas Neue','Barlow Condensed',sans-serif;--C:'Barlow Condensed',sans-serif;--B:'Barlow',sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--w);font-family:var(--B);overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:.7}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:18px 60px;background:rgba(8,4,15,.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--w08)}
+.logo{display:flex;flex-direction:column;gap:1px;text-decoration:none}
+.logo-n{font-family:var(--C);font-size:21px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;background:linear-gradient(90deg,#fff,var(--p3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.logo-s{font-size:8px;letter-spacing:.3em;color:var(--mg);text-transform:uppercase;font-weight:600;font-family:var(--C)}
+.nav-links{display:flex;gap:30px;list-style:none;align-items:center}
+.nav-links a{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--w70);text-decoration:none;font-weight:600;font-family:var(--C);transition:color .2s}
+.nav-links a:hover,.nav-links a.act{color:var(--mg)}
+.n-btn{background:linear-gradient(135deg,var(--purple),var(--mg));color:#fff!important;padding:10px 22px}
+.n-ph{color:var(--p3)!important}
+
+/* SHARED UTILS */
+.eye{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--mg);font-weight:700;font-family:var(--C);display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.eye::before{content:'';display:block;width:28px;height:1px;background:var(--mg);box-shadow:0 0 6px var(--mg)}
+.h2{font-family:var(--D);font-size:clamp(48px,5.5vw,84px);line-height:.9;color:#fff;margin-bottom:12px}
+.h2 span{background:linear-gradient(90deg,var(--mg),var(--p3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.btn-g{display:inline-flex;align-items:center;background:linear-gradient(135deg,var(--purple),var(--mg));color:#fff;font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;padding:14px 32px;text-decoration:none;font-family:var(--C);border:none;cursor:pointer;transition:all .3s}
+.btn-g:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(224,64,251,.38)}
+.btn-o{display:inline-flex;align-items:center;background:transparent;color:#fff;font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;padding:13px 28px;text-decoration:none;font-family:var(--C);border:1px solid var(--w15);transition:all .3s}
+.btn-o:hover{border-color:var(--p2);color:var(--p3)}
+.rev{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.rev.on{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+
+/* PAGE HERO */
+.hero{min-height:78vh;display:flex;flex-direction:column;justify-content:flex-end;padding:100px 80px 80px;position:relative;overflow:hidden;border-bottom:1px solid var(--w08)}
+.hb1{position:absolute;width:750px;height:750px;border-radius:50%;background:radial-gradient(circle,rgba(107,33,232,.22) 0%,transparent 70%);top:-240px;right:-100px;pointer-events:none}
+.hb2{position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(224,64,251,.12) 0%,transparent 70%);bottom:-80px;left:60px;pointer-events:none}
+.crumb{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--w40);font-family:var(--C);font-weight:600;margin-bottom:36px;display:flex;align-items:center;gap:12px;position:relative;z-index:1}
+.crumb span{color:var(--mg)}
+.crumb::before{content:'';display:block;width:24px;height:1px;background:var(--mg)}
+.hgrid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:flex-end;position:relative;z-index:1}
+.hh1{font-family:var(--D);font-size:clamp(80px,10vw,148px);line-height:.88;color:#fff}
+.hh1 span{background:linear-gradient(90deg,var(--mg),var(--p3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.htag{font-family:var(--C);font-size:13px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--mg);margin-bottom:20px;display:flex;align-items:center;gap:12px}
+.htag::before{content:'';display:block;width:24px;height:1px;background:var(--mg)}
+.hlead{font-size:19px;font-weight:300;line-height:1.65;color:var(--w);font-family:var(--C);letter-spacing:.015em;margin-bottom:36px}
+.hlead strong{color:var(--p3);font-weight:500}
+.hbtns{display:flex;gap:14px;flex-wrap:wrap}
+
+/* INTRO */
+.intro{padding:120px 80px;display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:start;position:relative;z-index:1}
+.intro-quote{font-size:21px;font-weight:300;line-height:1.65;color:var(--w);border-left:2px solid var(--mg);padding-left:28px;margin-bottom:36px;font-family:var(--C);letter-spacing:.015em}
+.intro-body{font-size:14.5px;line-height:1.9;color:var(--w40);font-weight:300}
+.intro-body p+p{margin-top:16px}
+.intro-body strong{color:var(--p3);font-weight:500}
+.tri-blocks{display:flex;flex-direction:column;gap:2px;margin-top:8px}
+.tri-block{display:flex;gap:20px;align-items:flex-start;padding:24px;background:var(--bg-card);border:1px solid var(--w08);border-left:2px solid transparent;transition:all .3s}
+.tri-block:hover{border-left-color:var(--mg);background:rgba(107,33,232,.08)}
+.tb-icon{width:36px;height:36px;background:linear-gradient(135deg,var(--purple),var(--mg));display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.tb-icon svg{width:16px;height:16px}
+.tb-title{font-family:var(--C);font-size:16px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#fff;margin-bottom:5px}
+.tb-desc{font-size:12.5px;color:var(--w40);line-height:1.6;font-weight:300}
+
+/* QUOTE STRIP */
+.qstrip{background:linear-gradient(135deg,rgba(107,33,232,.18),rgba(76,15,158,.22));border-top:1px solid rgba(107,33,232,.3);border-bottom:1px solid rgba(107,33,232,.3);padding:72px 80px;position:relative;z-index:1;overflow:hidden}
+.qstrip::before{content:'';position:absolute;width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,rgba(224,64,251,.1) 0%,transparent 70%);right:-80px;top:-80px;pointer-events:none}
+.qq{font-family:var(--D);font-size:clamp(28px,3.8vw,54px);line-height:1.05;color:#fff;max-width:880px;margin-bottom:24px}
+.qq span{background:linear-gradient(90deg,var(--mg),var(--p3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.qa{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--w40);font-family:var(--C);font-weight:600;display:flex;align-items:center;gap:16px}
+.qa::before{content:'';display:block;width:28px;height:1px;background:var(--w15)}
+
+/* SERVICES GRID */
+.services{padding:120px 80px;position:relative;z-index:1}
+.s-head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:60px}
+.s-note{font-size:14px;color:var(--w40);max-width:360px;line-height:1.7;font-weight:300;padding-bottom:6px}
+.sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--w08)}
+.sc{background:var(--bg-mid);padding:40px 34px;position:relative;overflow:hidden;transition:all .3s;cursor:default}
+.sc::after{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:linear-gradient(90deg,var(--purple),var(--mg));transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.sc:hover{background:rgba(107,33,232,.1)}
+.sc:hover::after{transform:scaleX(1)}
+.sc-n{font-family:var(--D);font-size:56px;line-height:1;color:var(--w04);position:absolute;top:16px;right:22px;transition:color .3s}
+.sc:hover .sc-n{color:rgba(107,33,232,.15)}
+.sc-tag{display:inline-block;font-size:8.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--mg);border:1px solid rgba(224,64,251,.28);padding:3px 10px;margin-bottom:16px;font-family:var(--C);font-weight:700}
+.sc-name{font-family:var(--C);font-size:22px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#fff;line-height:1.15;margin-bottom:10px}
+.sc-desc{font-size:12.5px;line-height:1.65;color:var(--w40);font-weight:300}
+
+/* PEAK PERFORMANCE */
+.peak{background:var(--bg-mid);border-top:1px solid var(--w08);border-bottom:1px solid var(--w08);padding:120px 80px;position:relative;z-index:1;overflow:hidden}
+.peak::before{content:'';position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(107,33,232,.14) 0%,transparent 70%);right:-100px;bottom:-100px;pointer-events:none}
+.peak-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.peak-desc{font-size:15px;line-height:1.8;color:var(--w40);font-weight:300;margin-top:18px;max-width:480px}
+.peak-desc strong{color:var(--p3);font-weight:500}
+.peak-items{display:flex;flex-direction:column;gap:2px;margin-top:36px}
+.pi{display:flex;gap:20px;align-items:flex-start;padding:22px 24px;background:var(--bg-card);border:1px solid var(--w08);transition:all .3s}
+.pi:hover{border-color:rgba(107,33,232,.4);background:rgba(107,33,232,.07)}
+.pi-dot{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,rgba(107,33,232,.4),rgba(224,64,251,.3));border:1px solid rgba(139,92,246,.4);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.pi-dot svg{width:13px;height:13px}
+.pi-t{font-family:var(--C);font-size:14px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#fff;margin-bottom:5px}
+.pi-d{font-size:12.5px;color:var(--w40);line-height:1.6;font-weight:300}
+.peak-right{display:flex;flex-direction:column;gap:16px;padding-top:4px}
+.fit-card{background:linear-gradient(145deg,rgba(107,33,232,.2),rgba(76,15,158,.25));border:1px solid rgba(107,33,232,.45);padding:40px}
+.fit-label{font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:var(--mg);font-family:var(--C);font-weight:700;margin-bottom:14px}
+.fit-title{font-family:var(--D);font-size:36px;color:#fff;margin-bottom:8px;line-height:1}
+.fit-sub{font-size:13px;color:var(--w70);line-height:1.7;font-weight:300;margin-bottom:20px}
+.fit-tags{display:flex;flex-wrap:wrap;gap:8px}
+.ft{font-size:9px;letter-spacing:.2em;text-transform:uppercase;background:var(--w08);border:1px solid rgba(139,92,246,.3);padding:5px 12px;color:var(--p3);font-family:var(--C);font-weight:700}
+.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.stat{background:var(--bg-card);border:1px solid var(--w08);padding:28px 20px;text-align:center}
+.stat-v{font-family:var(--D);font-size:52px;line-height:1;background:linear-gradient(135deg,var(--mg),var(--p3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:6px}
+.stat-l{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--w40);font-family:var(--C);font-weight:600}
+
+/* INTEGRATIVE MEDICINE */
+.integrative{padding:120px 80px;position:relative;z-index:1}
+.int-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.int-desc{font-size:15px;line-height:1.8;color:var(--w40);font-weight:300;margin-top:18px;max-width:460px}
+.int-desc strong{color:var(--p3);font-weight:500}
+.int-cards{display:flex;flex-direction:column;gap:2px;margin-top:36px}
+.int-card{padding:28px 30px;background:var(--bg-card);border:1px solid var(--w08);border-left:2px solid transparent;transition:all .3s}
+.int-card:hover{border-left-color:var(--mg);background:rgba(107,33,232,.07)}
+.int-card-title{font-family:var(--C);font-size:16px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#fff;margin-bottom:8px}
+.int-card-desc{font-size:13px;color:var(--w40);line-height:1.7;font-weight:300}
+.int-right{display:flex;flex-direction:column;gap:16px;padding-top:4px}
+.int-highlight{background:var(--bg-card);border:1px solid var(--w08);padding:36px}
+.ih-title{font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:var(--mg);font-family:var(--C);font-weight:700;margin-bottom:20px}
+.ih-list{display:flex;flex-direction:column;gap:11px}
+.ih-item{display:flex;align-items:center;gap:14px;font-size:13px;color:var(--w70);font-weight:300}
+.ih-item::before{content:'◆';font-size:6px;color:var(--p2);flex-shrink:0}
+.brochure-card{background:linear-gradient(145deg,rgba(107,33,232,.2),rgba(76,15,158,.25));border:1px solid rgba(107,33,232,.45);padding:36px}
+.bc-title{font-family:var(--D);font-size:32px;color:#fff;margin-bottom:10px}
+.bc-body{font-size:13px;color:var(--w70);line-height:1.7;font-weight:300;margin-bottom:24px}
+
+/* FACILITY */
+.facility{background:var(--bg-mid);border-top:1px solid var(--w08);border-bottom:1px solid var(--w08);padding:100px 80px;position:relative;z-index:1}
+.fac-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--w08);margin-top:56px}
+.fac-item{background:var(--bg-card);padding:36px 28px;transition:all .3s}
+.fac-item:hover{background:rgba(107,33,232,.09)}
+.fac-icon{width:40px;height:2px;background:linear-gradient(90deg,var(--purple),var(--mg));margin-bottom:20px}
+.fac-title{font-family:var(--C);font-size:16px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#fff;margin-bottom:8px}
+.fac-desc{font-size:12.5px;color:var(--w40);line-height:1.6;font-weight:300}
+
+/* CONSULT */
+.consult{padding:120px 80px;position:relative;z-index:1}
+.con-grid{display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:start}
+.con-promises{display:flex;flex-direction:column;gap:2px;margin-top:36px}
+.cp{display:flex;align-items:flex-start;gap:18px;padding:20px 22px;background:var(--bg-card);border:1px solid var(--w08)}
+.cp-dot{width:8px;height:8px;border-radius:50%;background:var(--mg);box-shadow:0 0 8px var(--mg);flex-shrink:0;margin-top:5px;animation:pd 2.5s ease infinite}
+.cp-t{font-size:13px;color:var(--w70);line-height:1.6;font-weight:300}
+.cp-t strong{color:#fff;font-weight:500}
+.form-box{background:var(--bg-card);border:1px solid var(--w08);padding:48px}
+.fb-title{font-family:var(--D);font-size:36px;color:#fff;margin-bottom:8px}
+.fb-sub{font-size:13px;color:var(--w40);margin-bottom:36px;font-weight:300;line-height:1.6}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.fg{display:flex;flex-direction:column;gap:8px;margin-bottom:14px}
+.fl{font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--w40);font-family:var(--C);font-weight:700}
+.fi{background:var(--bg-mid);border:1px solid var(--w15);padding:14px 18px;font-size:14px;color:#fff;font-family:var(--B);outline:none;transition:border-color .25s;width:100%}
+.fi:focus{border-color:rgba(139,92,246,.6)}
+.fi::placeholder{color:var(--w40)}
+.fs{background:var(--bg-mid);border:1px solid var(--w15);padding:14px 18px;font-size:14px;color:var(--w70);font-family:var(--B);outline:none;transition:border-color .25s;width:100%;appearance:none}
+.fs:focus{border-color:rgba(139,92,246,.6)}
+.fta{background:var(--bg-mid);border:1px solid var(--w15);padding:14px 18px;font-size:14px;color:#fff;font-family:var(--B);outline:none;transition:border-color .25s;width:100%;resize:vertical;min-height:110px}
+.fta:focus{border-color:rgba(139,92,246,.6)}
+.fta::placeholder{color:var(--w40)}
+.fsub{width:100%;background:linear-gradient(135deg,var(--purple),var(--mg));color:#fff;border:none;padding:16px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;font-family:var(--C);cursor:pointer;margin-top:8px;transition:all .3s}
+.fsub:hover{box-shadow:0 10px 32px rgba(224,64,251,.35);transform:translateY(-1px)}
+.fnote{font-size:11px;color:var(--w40);text-align:center;margin-top:14px;font-weight:300;line-height:1.5}
+.fnote a{color:var(--p3);text-decoration:none}
+
+/* CTA FINAL */
+.cta{padding:100px 80px;text-align:center;position:relative;z-index:1;background:var(--bg-mid);border-top:1px solid var(--w08);overflow:hidden}
+.cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(107,33,232,.15) 0%,transparent 65%);pointer-events:none}
+.cta-h{font-family:var(--D);font-size:clamp(52px,7vw,108px);line-height:.9;color:#fff;margin-bottom:24px;position:relative}
+.cta-h span{background:linear-gradient(90deg,var(--mg),var(--p3),var(--mg));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200%;animation:sh 3s linear infinite}
+.cta-sub{font-size:15px;color:var(--w40);max-width:480px;margin:0 auto 44px;line-height:1.7;font-weight:300}
+.cta-btns{display:flex;align-items:center;justify-content:center;gap:14px}
+.cta-c{margin-top:28px;font-size:11px;color:var(--w40);letter-spacing:.16em;font-family:var(--C)}
+.cta-c a{color:var(--p3);text-decoration:none}
+
+/* FOOTER */
+footer{background:#07030E;padding:64px 80px 36px;border-top:1px solid var(--w08);position:relative;z-index:1}
+.ft-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:52px;padding-bottom:52px;border-bottom:1px solid var(--w08);margin-bottom:32px}
+.ft-logo{font-family:var(--C);font-size:19px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:linear-gradient(90deg,#fff,var(--p3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:12px}
+.ft-tag{font-size:12px;color:var(--w40);line-height:1.7;margin-bottom:16px}
+.ft-addr{font-size:12px;color:var(--w40);line-height:1.85}
+.ft-addr a{color:var(--p3);text-decoration:none}
+.ft-col-t{font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:var(--mg);font-family:var(--C);font-weight:700;margin-bottom:16px}
+.ft-links{list-style:none;display:flex;flex-direction:column;gap:9px}
+.ft-links a{font-size:12.5px;color:var(--w40);text-decoration:none;font-family:var(--C);letter-spacing:.04em;transition:color .2s}
+.ft-links a:hover{color:var(--p3)}
+.ft-bot{display:flex;justify-content:space-between;font-size:10.5px;color:var(--w40);font-family:var(--C);letter-spacing:.08em}
+
+@keyframes sh{0%{background-position:0% 50%}100%{background-position:200% 50%}}
+@keyframes pd{0%,100%{box-shadow:0 0 6px var(--mg)}50%{box-shadow:0 0 16px var(--mg),0 0 28px rgba(224,64,251,.4)}}</style>
+    <style>
+      .reveal,
+      .rev,
+      .reveal.visible,
+      .rev.on {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+  <a href="/" class="logo"><span class="logo-n">Pure Renewal</span><span class="logo-s">Regenerative Concierge Medicine · Orlando, FL</span></a>
+  <ul class="nav-links">
+    <li><a href="/about">About</a></li>
+    <li><a href="/concierge">Concierge</a></li>
+    <li><a href="/regenerative" class="act">Regenerative</a></li>
+    <li><a href="/anti-aging">Anti-Aging</a></li>
+    <li><a href="/memberships">Memberships</a></li>
+    <li><a href="tel:4073330496" class="n-ph">(407) 333-0496</a></li>
+    <li><a href="#consult" class="n-btn">Book Now</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hb1"></div><div class="hb2"></div>
+  <div class="crumb">Pure Renewal <span>/ Regenerative Medicine</span></div>
+  <div class="hgrid">
+    <h1 class="hh1">WHERE<br>SCIENCE<br>MEETS<br><span>CELLULAR<br>RENEWAL.</span></h1>
+    <div>
+      <div class="htag">Central Florida's Premier Regenerative Care Destination</div>
+      <p class="hlead">Advanced, <strong>physician-led regenerative care</strong> in a state-of-the-art Downtown Orlando facility designed for comfort, innovation, and privacy. The <strong>perfect trifecta</strong> of regenerative therapy — bio-identical hormones, peptides, and stem cells.</p>
+      <div class="hbtns">
+        <a href="#consult" class="btn-g">Request a Consultation</a>
+        <a href="#services" class="btn-o">Our Therapies →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="intro">
+  <div class="rev">
+    <div class="eye">Our Approach</div>
+    <h2 class="h2">The Perfect<br><span>Trifecta.</span></h2>
+    <div class="tri-blocks">
+      <div class="tri-block">
+        <div class="tb-icon"><svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="5" stroke="white" stroke-width="1"/><circle cx="8" cy="8" r="2" fill="white"/></svg></div>
+        <div><div class="tb-title">Bio-Identical Hormones</div><div class="tb-desc">Precision hormone restoration using compounds molecularly identical to those your body naturally produces — restoring energy, mood, and vitality.</div></div>
+      </div>
+      <div class="tri-block">
+        <div class="tb-icon"><svg viewBox="0 0 16 16" fill="none"><path d="M4 12C4 7 6 4 8 4C10 4 12 7 12 12" stroke="white" stroke-width="1" fill="none"/><circle cx="8" cy="7" r="2" fill="white" opacity=".6"/></svg></div>
+        <div><div class="tb-title">Peptide Therapy</div><div class="tb-desc">Biological messengers signaling the body to perform specific regenerative functions at a cellular level. Tailored to your exact protocol.</div></div>
+      </div>
+      <div class="tri-block">
+        <div class="tb-icon"><svg viewBox="0 0 16 16" fill="none"><ellipse cx="8" cy="8" rx="5" ry="5.5" stroke="white" stroke-width="1"/><ellipse cx="8" cy="8" rx="2" ry="2.5" fill="white" opacity=".5"/><circle cx="8" cy="8" r="1" fill="white"/></svg></div>
+        <div><div class="tb-title">Stem Cell Therapy</div><div class="tb-desc">Cell-based regenerative medicine targeting tissue repair, inflammation reduction, and biological age reversal from within.</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="rev d1">
+    <p class="intro-quote">Welcome to Pure Renewal Concierge Regenerative Medicine — Central Florida's premier destination for advanced, physician-led regenerative care.</p>
+    <div class="intro-body">
+      <p>Our state-of-the-art facility, located in <strong>Downtown Orlando</strong>, is designed for comfort, innovation, and privacy — just minutes from Orlando Executive Airport for private jet arrivals and only 25 minutes from Orlando International Airport (OIA).</p>
+      <p>Surrounded by four luxury hotels within walking distance, our patients enjoy convenience and discretion while accessing world-class regenerative and surgical treatments in a <strong>State of Florida–approved, Level 3 surgical and clinical environment.</strong></p>
+      <p>At Pure Renewal, we don't treat symptoms in isolation; we restore the body's natural balance and regenerative capacity from within. This synergy of science and precision medicine forms the foundation of every customized treatment plan we design.</p>
+      <p>Whether you're seeking relief from chronic pain, exploring regenerative therapies, or pursuing longevity and aesthetic wellness, we offer the most advanced solutions in a serene, world-class setting. <strong>Excellence isn't an option — it's our standard.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE STRIP -->
+<div class="qstrip rev">
+  <p class="qq">"At Pure Renewal, we don't treat symptoms in isolation — we restore the body's <span>natural balance and regenerative capacity</span> from within."</p>
+  <div class="qa">Pure Renewal · Regenerative Philosophy</div>
+</div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="s-head rev">
+    <div><div class="eye">Restorative Services</div><h2 class="h2">All<br><span>Therapies.</span></h2></div>
+    <p class="s-note">Every service is physician-led, evidence-based, and designed around your unique biology and regenerative goals.</p>
+  </div>
+  <div class="sgrid">
+    <div class="sc rev"><div class="sc-n">01</div><div class="sc-tag">Weight Loss</div><div class="sc-name">Physician Weight Loss</div><div class="sc-desc">GLP-1, 2 and 3 physician-supervised protocols. Targets fat loss while preserving lean muscle mass. Real results, real patients.</div></div>
+    <div class="sc rev d1"><div class="sc-n">02</div><div class="sc-tag">Energy</div><div class="sc-name">Nano NAD+</div><div class="sc-desc">Increases energy, mitochondrial support, reduces inflammation. Restores cellular energy production and cognitive function.</div></div>
+    <div class="sc rev d2"><div class="sc-n">03</div><div class="sc-tag">Performance</div><div class="sc-name">Male Performance Booster</div><div class="sc-desc">Treats ED and supports longer erections. Physician-supervised peptide and hormone protocols for male vitality restoration.</div></div>
+    <div class="sc rev"><div class="sc-n">04</div><div class="sc-tag">Cognitive</div><div class="sc-name">Cognitive Enhancement</div><div class="sc-desc">Brain support and neuroprotection. Sharpen focus, improve memory, reduce mental fog, and support long-term neural health.</div></div>
+    <div class="sc rev d1"><div class="sc-n">05</div><div class="sc-tag">Oncology</div><div class="sc-name">Hi-Dose Vitamin C</div><div class="sc-desc">Supportive oncology support via high-dose IV infusions. Immune fortification and cellular repair through oxidative therapy.</div></div>
+    <div class="sc rev d2"><div class="sc-n">06</div><div class="sc-tag">Cell-Based</div><div class="sc-name">Stem Cell Therapy</div><div class="sc-desc">Tailored cell-based medicine targeting tissue repair, inflammation reduction, and biological age reversal.</div></div>
+    <div class="sc rev"><div class="sc-n">07</div><div class="sc-tag">Precision</div><div class="sc-name">Peptide Therapy</div><div class="sc-desc">Tailored to your specific needs — from longevity and recovery to immune support, hormonal balance, and performance.</div></div>
+    <div class="sc rev d1"><div class="sc-n">08</div><div class="sc-tag">Skin</div><div class="sc-name">Microneedling</div><div class="sc-desc">Stem cell and salmon DNA infusion. Repairs and renews skin from within at a cellular level for lasting rejuvenation.</div></div>
+    <div class="sc rev d2"><div class="sc-n">09</div><div class="sc-tag">Oxygen</div><div class="sc-name">Ozone Therapy</div><div class="sc-desc">Enhance oxygen efficiency. Elevate cellular vitality. Targeted ozone protocols for immune activation and systemic renewal.</div></div>
+    <div class="sc rev"><div class="sc-n">10</div><div class="sc-tag">Light</div><div class="sc-name">Red Light Therapy</div><div class="sc-desc">Heal faster, feel better, age gracefully. Photobiomodulation for tissue repair, inflammation reduction, and skin health.</div></div>
+    <div class="sc rev d1"><div class="sc-n">11</div><div class="sc-tag">Integrative</div><div class="sc-name">Integrative Oncology</div><div class="sc-desc">Blends the best of conventional and regenerative medicine for comprehensive cancer support alongside traditional care.</div></div>
+    <div class="sc rev d2"><div class="sc-n">12</div><div class="sc-tag">Genetics</div><div class="sc-name">Genetic Bio-Testing</div><div class="sc-desc">Genomic analysis guiding precision protocols tailored to your unique biological blueprint for optimal outcomes.</div></div>
+    <div class="sc rev"><div class="sc-n">13</div><div class="sc-tag">Cellular Detox</div><div class="sc-name">EBOO Therapy</div><div class="sc-desc">Detoxify on a cellular level. Extracorporeal Blood Ozonation and Oxygenation for advanced immune and cellular restoration.</div></div>
+    <div class="sc rev d1"><div class="sc-n">14</div><div class="sc-tag">IV</div><div class="sc-name">IV Therapy Infusions</div><div class="sc-desc">Restore lost nutrients. Physician-formulated IV infusions delivering essential vitamins and compounds directly to the bloodstream.</div></div>
+    <div class="sc rev d2"><div class="sc-n">15</div><div class="sc-tag">Peptide</div><div class="sc-name">IV Therapy</div><div class="sc-desc">Peptide therapy, IV therapy, and intimate performance protocols — integrated into your personalized regenerative plan.</div></div>
+  </div>
+</section>
+
+<!-- PEAK PERFORMANCE -->
+<section class="peak">
+  <div class="peak-grid">
+    <div class="rev">
+      <div class="eye">FIT / SLIM Protocol</div>
+      <h2 class="h2">Peak Performance<br>&amp; <span>Fat Reduction.</span></h2>
+      <p class="peak-desc">Physician weight loss and <strong>microdosing peptide therapy</strong> that targets fat loss and protects muscle mass. Real results backed by science — with complimentary consultations.</p>
+      <div class="peak-items">
+        <div class="pi">
+          <div class="pi-dot"><svg viewBox="0 0 13 13" fill="none"><path d="M2 7l3 3 6-6" stroke="white" stroke-width="1.2" stroke-linecap="round"/></svg></div>
+          <div><div class="pi-t">Sculpted Weight Reduction</div><div class="pi-d">Targets fat loss while preserving lean muscle, helping reshape and tone the body with lasting results.</div></div>
+        </div>
+        <div class="pi">
+          <div class="pi-dot"><svg viewBox="0 0 13 13" fill="none"><path d="M2 7l3 3 6-6" stroke="white" stroke-width="1.2" stroke-linecap="round"/></svg></div>
+          <div><div class="pi-t">Optimized Metabolic Function</div><div class="pi-d">Enhances insulin sensitivity and glucose balance to restore metabolic efficiency and promote long-term vitality.</div></div>
+        </div>
+        <div class="pi">
+          <div class="pi-dot"><svg viewBox="0 0 13 13" fill="none"><path d="M2 7l3 3 6-6" stroke="white" stroke-width="1.2" stroke-linecap="round"/></svg></div>
+          <div><div class="pi-t">Renewed Energy &amp; Performance</div><div class="pi-d">Ignites stamina, sharpens focus, and supports higher daily performance — empowering both body and mind.</div></div>
+        </div>
+        <div class="pi">
+          <div class="pi-dot"><svg viewBox="0 0 13 13" fill="none"><path d="M2 7l3 3 6-6" stroke="white" stroke-width="1.2" stroke-linecap="round"/></svg></div>
+          <div><div class="pi-t">Cardiovascular Renewal</div><div class="pi-d">Emerging research suggests benefits for blood pressure, cholesterol, and overall heart health, reinforcing total body wellness.</div></div>
+        </div>
+        <div class="pi">
+          <div class="pi-dot"><svg viewBox="0 0 13 13" fill="none"><path d="M2 7l3 3 6-6" stroke="white" stroke-width="1.2" stroke-linecap="round"/></svg></div>
+          <div><div class="pi-t">Next-Generation Science</div><div class="pi-d">Retatrutide goes beyond weight management — delivering transformative results for energy, vitality, and whole-body balance.</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="peak-right rev d1">
+      <div class="fit-card">
+        <div class="fit-label">FIT / SLIM Protocol</div>
+        <div class="fit-title">PHYSICIAN<br>WEIGHT LOSS</div>
+        <p class="fit-sub">Microdosing peptide therapy that targets fat loss and protects muscle mass. Real results, real patients. Complimentary consultations available.</p>
+        <div class="fit-tags">
+          <span class="ft">GLP-1 Semaglutide</span>
+          <span class="ft">GLP-2 Teduglutide</span>
+          <span class="ft">GLP-3 Retatrutide</span>
+          <span class="ft">Microdosing Peptides</span>
+          <span class="ft">Muscle Preservation</span>
+        </div>
+      </div>
+      <div class="stats-row">
+        <div class="stat"><div class="stat-v">GLP-1</div><div class="stat-l">Semaglutide</div></div>
+        <div class="stat"><div class="stat-v">GLP-2</div><div class="stat-l">Teduglutide</div></div>
+        <div class="stat"><div class="stat-v">GLP-3</div><div class="stat-l">Retatrutide</div></div>
+      </div>
+      <a href="#consult" class="btn-g" style="width:100%;justify-content:center;margin-top:4px">Complimentary Consult →</a>
+    </div>
+  </div>
+</section>
+
+<!-- INTEGRATIVE MEDICINE -->
+<section class="integrative">
+  <div class="int-grid">
+    <div class="rev">
+      <div class="eye">Integrative Medicine</div>
+      <h2 class="h2">Peptides<br>That <span>Heal.</span></h2>
+      <p class="int-desc">Our integrative approach combines <strong>cutting-edge therapies</strong> — peptide therapy, ozone therapy, chelation, and IV infusions — with boutique, personalized care and continuous medical support.</p>
+      <div class="int-cards">
+        <div class="int-card">
+          <div class="int-card-title">Pain Relief</div>
+          <div class="int-card-desc">Peptides enhance natural healing processes, providing relief from musculoskeletal pain and peripheral neuropathy. Targeted protocols for chronic and acute pain management.</div>
+        </div>
+        <div class="int-card">
+          <div class="int-card-title">Libido &amp; Hormone Regulation</div>
+          <div class="int-card-desc">Peptides can help improve libido, regulate hormones, and restore balance to the body — for both men and women at any stage of life.</div>
+        </div>
+        <div class="int-card">
+          <div class="int-card-title">COPD Therapy</div>
+          <div class="int-card-desc">Peptides support lung function by reducing inflammation, improving respiratory health, and enhancing the body's response to chronic obstructive pulmonary disease.</div>
+        </div>
+      </div>
+    </div>
+    <div class="int-right rev d1">
+      <div class="int-highlight">
+        <div class="ih-title">Each Treatment Plan Is Designed To</div>
+        <div class="ih-list">
+          <div class="ih-item">Activate cellular renewal and restore biological balance</div>
+          <div class="ih-item">Elevate whole-body wellness from the inside out</div>
+          <div class="ih-item">Optimize energy and enhance vitality</div>
+          <div class="ih-item">Go beyond the limits of conventional medicine</div>
+          <div class="ih-item">Unlock a higher standard of health and resilience</div>
+          <div class="ih-item">Provide continuous support and biomarker monitoring</div>
+        </div>
+      </div>
+      <div class="brochure-card">
+        <div class="bc-title">VIEW OUR BROCHURE</div>
+        <p class="bc-body">Download the complete Pure Renewal guide — all regenerative services, physician bios, protocols, and facility details in one document.</p>
+        <a href="https://www.pure-renewal.com/_files/ugd/9fd4ce_8c4b6809d55a4cfd9d033c89a7645e0c.pdf" target="_blank" class="btn-g">Download Brochure →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FACILITY -->
+<section class="facility">
+  <div class="rev" style="text-align:center;max-width:660px;margin:0 auto">
+    <div class="eye" style="justify-content:center"><span style="font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--mg);font-weight:700;font-family:var(--C)">World-Class Facility</span></div>
+    <h2 class="h2" style="font-size:clamp(52px,6vw,88px)">Downtown <span>Orlando.</span></h2>
+    <p style="font-size:15px;color:var(--w40);line-height:1.75;font-weight:300;margin-top:16px">State-of-the-art care in a beautiful, discreet environment — minutes from private jet access and surrounded by luxury hotels.</p>
+  </div>
+  <div class="fac-grid">
+    <div class="fac-item rev">
+      <div class="fac-icon"></div>
+      <div class="fac-title">Level 3 Surgical Facility</div>
+      <div class="fac-desc">State of Florida–approved office-based surgery facility with clinical-grade safety standards and advanced equipment.</div>
+    </div>
+    <div class="fac-item rev d1">
+      <div class="fac-icon"></div>
+      <div class="fac-title">Private Jet Access</div>
+      <div class="fac-desc">Minutes from Orlando Executive Airport for private jet arrivals. Just 25 minutes from Orlando International Airport (OIA).</div>
+    </div>
+    <div class="fac-item rev d2">
+      <div class="fac-icon"></div>
+      <div class="fac-title">Luxury Surroundings</div>
+      <div class="fac-desc">Four luxury hotels within walking distance. Complete privacy and discretion for every patient, every visit.</div>
+    </div>
+    <div class="fac-item rev d3">
+      <div class="fac-icon"></div>
+      <div class="fac-title">Board-Certified Team</div>
+      <div class="fac-desc">Specialists in Neurosurgery, Orthopedics, Pain Management, Regenerative Medicine, Integrative Oncology, and Internal Medicine.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONSULT FORM -->
+<section class="consult" id="consult" style="background:var(--bg-mid);border-top:1px solid var(--w08)">
+  <div class="con-grid">
+    <div class="rev">
+      <div class="eye">Request a Consultation</div>
+      <h2 class="h2">Start Your<br><span>Journey.</span></h2>
+      <p style="font-size:14px;color:var(--w40);line-height:1.75;font-weight:300;margin-top:16px;margin-bottom:36px">Every new patient begins with a complimentary physician consultation. A real conversation about your health, your goals, and what regenerative medicine can do for you.</p>
+      <div class="con-promises">
+        <div class="cp"><div class="cp-dot"></div><div class="cp-t"><strong>Complimentary consultation</strong> — full physician evaluation at no cost.</div></div>
+        <div class="cp"><div class="cp-dot"></div><div class="cp-t"><strong>No wait times</strong> — direct physician access from day one.</div></div>
+        <div class="cp"><div class="cp-dot"></div><div class="cp-t"><strong>0% patient financing</strong> — memberships from $199/month.</div></div>
+        <div class="cp"><div class="cp-dot"></div><div class="cp-t"><strong>Private jet access</strong> — minutes from Orlando Executive Airport.</div></div>
+        <div class="cp"><div class="cp-dot"></div><div class="cp-t"><strong>Tele-health available</strong> — consult from anywhere via video or phone.</div></div>
+      </div>
+    </div>
+    <div class="form-box rev d1">
+      <div class="fb-title">Request Consult</div>
+      <p class="fb-sub">Our team will reach out within 24 hours to schedule your complimentary physician consultation.</p>
+      <div class="frow">
+        <div class="fg"><label class="fl">First Name</label><input class="fi" type="text" placeholder="John"></div>
+        <div class="fg"><label class="fl">Last Name</label><input class="fi" type="text" placeholder="Doe"></div>
+      </div>
+      <div class="frow">
+        <div class="fg"><label class="fl">Email</label><input class="fi" type="email" placeholder="john@email.com"></div>
+        <div class="fg"><label class="fl">Phone</label><input class="fi" type="tel" placeholder="(407) 000-0000"></div>
+      </div>
+      <div class="fg"><label class="fl">Therapy of Interest</label>
+        <select class="fs">
+          <option value="" disabled selected>Select a therapy</option>
+          <option>EBOO Therapy</option><option>Ozone Therapy</option><option>Nano NAD+</option><option>Peptide Therapy</option><option>Stem Cell Therapy</option><option>Physician Weight Loss (GLP-1/2/3)</option><option>Hi-Dose Vitamin C</option><option>Cognitive Enhancement</option><option>Male Performance</option><option>Integrative Oncology</option><option>Genetic Bio-Testing</option><option>Not sure — help me choose</option>
+        </select>
+      </div>
+      <div class="fg"><label class="fl">Health Goals</label><textarea class="fta" placeholder="Tell us what you'd like to achieve with regenerative medicine at Pure Renewal..."></textarea></div>
+      <button class="fsub" onclick="this.textContent='Request Sent ✓';this.style.background='linear-gradient(135deg,#1a6b2a,#2d8a40)'">Submit Consultation Request</button>
+      <p class="fnote">All information is handled in strict confidence. · <a href="tel:4073330496">(407) 333-0496</a> · <a href="mailto:info@pure-renewal.com">info@pure-renewal.com</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta">
+  <h2 class="cta-h">CELLULAR RENEWAL.<br><span>STARTS NOW.</span></h2>
+  <p class="cta-sub">The most advanced regenerative medicine in Central Florida — physician-led, precision-tailored, and ready for you.</p>
+  <div class="cta-btns"><a href="tel:4073330496" class="btn-g">Call (407) 333-0496</a><a href="mailto:info@pure-renewal.com" class="btn-o">Email Us →</a></div>
+  <p class="cta-c">801 N. Orange Ave, Suite 710 · Downtown Orlando, FL 32801 · <a href="mailto:info@pure-renewal.com">info@pure-renewal.com</a></p>
+</section>
+
+<footer>
+  <div class="ft-top">
+    <div><div class="ft-logo">Pure Renewal</div><p class="ft-tag">Regenerative Concierge Medicine.<br>Where Science Meets Cellular Renewal.</p><div class="ft-addr">801 N. Orange Ave, Suite 710<br>Orlando, FL 32801<br><br><a href="tel:4073330496">(407) 333-0496</a><br><a href="mailto:info@pure-renewal.com">info@pure-renewal.com</a></div></div>
+    <div><div class="ft-col-t">Regenerative</div><ul class="ft-links"><li><a href="#">EBOO Therapy</a></li><li><a href="#">Ozone Therapy</a></li><li><a href="#">Nano NAD+</a></li><li><a href="#">Peptide Therapy</a></li><li><a href="#">Stem Cell Therapy</a></li><li><a href="#">IV Infusions</a></li><li><a href="#">Hi-Dose Vitamin C</a></li><li><a href="#">PNOĒ Testing</a></li></ul></div>
+    <div><div class="ft-col-t">Services</div><ul class="ft-links"><li><a href="/anti-aging">Anti-Aging</a></li><li><a href="#">Concierge Care</a></li><li><a href="#">Weight Loss</a></li><li><a href="#">Cognitive Enhancement</a></li><li><a href="#">Male Performance</a></li><li><a href="#">Integrative Oncology</a></li><li><a href="#">Genetic Bio-Testing</a></li><li><a href="#">Red Light Therapy</a></li></ul></div>
+    <div><div class="ft-col-t">Contact</div><ul class="ft-links"><li><a href="#consult">Book Consultation</a></li><li><a href="/memberships">Memberships</a></li><li><a href="#">About Us</a></li><li><a href="#">View Brochure</a></li><li><a href="tel:4073330496">(407) 333-0496</a></li></ul></div>
+  </div>
+  <div class="ft-bot"><span>© 2026 Pure Renewal Regenerative Concierge Medicine · Orlando, FL</span><span>801 N. Orange Ave, Suite 710 · All rights reserved</span></div>
+</footer>
+
+
+  </body>
+</html>
