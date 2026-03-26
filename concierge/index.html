@@ -1,0 +1,1553 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Concierge Medicine — Pure Renewal Regenerative Concierge Medicine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@300;400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet" />
+    <style>:root {
+  --bg:      #08040F;
+  --bg-mid:  #0E0819;
+  --bg-card: #120B1F;
+  --purple:  #6B21E8;
+  --purple-2:#8B5CF6;
+  --purple-3:#A78BFA;
+  --magenta: #E040FB;
+  --w:       #FFFFFF;
+  --w70:     rgba(255,255,255,.70);
+  --w40:     rgba(255,255,255,.40);
+  --w15:     rgba(255,255,255,.15);
+  --w08:     rgba(255,255,255,.08);
+  --w04:     rgba(255,255,255,.04);
+  --display: 'Bebas Neue','Barlow Condensed',sans-serif;
+  --cond:    'Barlow Condensed',sans-serif;
+  --body:    'Barlow',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--w);font-family:var(--body);overflow-x:hidden}
+
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:.7}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:18px 60px;background:rgba(8,4,15,.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--w08)}
+.logo-wrap{display:flex;flex-direction:column;gap:1px;text-decoration:none}
+.logo-name{font-family:var(--cond);font-size:21px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;background:linear-gradient(90deg,#fff,var(--purple-3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.logo-sub{font-size:8px;letter-spacing:.3em;color:var(--magenta);text-transform:uppercase;font-weight:600;font-family:var(--cond)}
+.nav-links{display:flex;gap:32px;list-style:none;align-items:center}
+.nav-links a{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--w70);text-decoration:none;font-weight:600;font-family:var(--cond);transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--magenta)}
+.nav-btn{background:linear-gradient(135deg,var(--purple),var(--magenta));color:white!important;padding:10px 22px;transition:opacity .25s!important}
+.nav-btn:hover{opacity:.85}
+.nav-phone{color:var(--purple-3)!important}
+
+/* ── SHARED ── */
+.s-eye{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--magenta);font-weight:700;font-family:var(--cond);display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.s-eye::before{content:'';display:block;width:28px;height:1px;background:var(--magenta);box-shadow:0 0 6px var(--magenta)}
+.s-h2{font-family:var(--display);font-size:clamp(48px,5.5vw,84px);line-height:.9;color:white;margin-bottom:12px}
+.s-h2 span{background:linear-gradient(90deg,var(--magenta),var(--purple-3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.btn-grad{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,var(--purple),var(--magenta));color:white;font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;padding:14px 32px;text-decoration:none;font-family:var(--cond);cursor:pointer;border:none;transition:all .3s}
+.btn-grad:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(224,64,251,.38)}
+.btn-ghost{display:inline-flex;align-items:center;gap:10px;background:transparent;color:white;font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;padding:13px 28px;text-decoration:none;font-family:var(--cond);border:1px solid var(--w15);transition:all .3s}
+.btn-ghost:hover{border-color:var(--purple-2);color:var(--purple-3)}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.rd1{transition-delay:.08s}.rd2{transition-delay:.16s}.rd3{transition-delay:.24s}
+
+/* ── PAGE HERO ── */
+.page-hero{min-height:76vh;display:flex;flex-direction:column;justify-content:flex-end;padding:100px 80px 80px;position:relative;overflow:hidden;border-bottom:1px solid var(--w08)}
+.ph-blob{position:absolute;border-radius:50%;pointer-events:none}
+.ph-blob-1{width:750px;height:750px;background:radial-gradient(circle,rgba(107,33,232,.22) 0%,transparent 70%);top:-250px;right:-120px}
+.ph-blob-2{width:420px;height:420px;background:radial-gradient(circle,rgba(224,64,251,.12) 0%,transparent 70%);bottom:-100px;left:80px}
+.ph-crumb{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--w40);font-family:var(--cond);font-weight:600;margin-bottom:36px;display:flex;align-items:center;gap:12px;position:relative;z-index:1}
+.ph-crumb span{color:var(--magenta)}
+.ph-crumb::before{content:'';display:block;width:24px;height:1px;background:var(--magenta)}
+.ph-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:flex-end;position:relative;z-index:1}
+.ph-h1{font-family:var(--display);font-size:clamp(80px,10vw,150px);line-height:.88;letter-spacing:.01em;color:white}
+.ph-h1 span{background:linear-gradient(90deg,var(--magenta),var(--purple-3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.ph-right{padding-bottom:8px}
+.ph-tag{font-family:var(--cond);font-size:13px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--magenta);margin-bottom:20px;display:flex;align-items:center;gap:12px}
+.ph-tag::before{content:'';display:block;width:24px;height:1px;background:var(--magenta)}
+.ph-lead{font-size:20px;font-weight:300;line-height:1.65;color:var(--w);font-family:var(--cond);letter-spacing:.015em;margin-bottom:36px}
+.ph-lead strong{color:var(--purple-3);font-weight:500}
+.ph-btns{display:flex;gap:14px;flex-wrap:wrap}
+.ph-scroll{position:absolute;bottom:36px;right:80px;font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--w40);font-family:var(--cond);font-weight:600;display:flex;align-items:center;gap:10px;z-index:1}
+.ph-scroll::after{content:'';display:block;width:1px;height:36px;background:var(--w15)}
+
+/* ── WHAT YOU GAIN ── */
+.gain{padding:120px 80px;display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:start;position:relative;z-index:1}
+.gain-left{}
+.gain-items{display:flex;flex-direction:column;gap:2px;margin-top:40px}
+.gain-item{display:flex;gap:24px;align-items:flex-start;padding:28px 26px;background:var(--bg-card);border:1px solid var(--w08);border-left:2px solid transparent;transition:all .35s;cursor:default}
+.gain-item:hover{background:rgba(107,33,232,.09);border-left-color:var(--magenta)}
+.gain-num{font-family:var(--display);font-size:52px;line-height:1;background:linear-gradient(135deg,var(--purple),var(--magenta));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;flex-shrink:0;width:52px}
+.gain-content{}
+.gain-title{font-family:var(--cond);font-size:18px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:white;margin-bottom:8px}
+.gain-desc{font-size:13.5px;line-height:1.7;color:var(--w40);font-weight:300}
+.gain-right{padding-top:6px}
+.gain-intro{font-size:21px;font-weight:300;line-height:1.65;color:var(--w);border-left:2px solid var(--magenta);padding-left:28px;margin-bottom:36px;font-family:var(--cond);letter-spacing:.015em}
+.gain-body{font-size:14.5px;line-height:1.9;color:var(--w40);font-weight:300}
+.gain-body p+p{margin-top:16px}
+.gain-body strong{color:var(--purple-3);font-weight:500}
+.gain-specialties{margin-top:36px}
+.gs-title{font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:var(--magenta);font-family:var(--cond);font-weight:700;margin-bottom:16px}
+.gs-tags{display:flex;flex-wrap:wrap;gap:9px}
+.gs-tag{font-size:9px;letter-spacing:.18em;text-transform:uppercase;padding:6px 14px;border:1px solid rgba(139,92,246,.3);color:var(--purple-3);font-family:var(--cond);font-weight:700}
+
+/* ── QUOTE STRIP ── */
+.phi-strip{background:linear-gradient(135deg,rgba(107,33,232,.18),rgba(76,15,158,.22));border-top:1px solid rgba(107,33,232,.3);border-bottom:1px solid rgba(107,33,232,.3);padding:72px 80px;position:relative;z-index:1;overflow:hidden}
+.phi-strip::before{content:'';position:absolute;width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,rgba(224,64,251,.1) 0%,transparent 70%);right:-80px;top:-80px;pointer-events:none}
+.phi-quote{font-family:var(--display);font-size:clamp(30px,3.8vw,56px);line-height:1.05;color:white;max-width:900px;margin-bottom:24px}
+.phi-quote span{background:linear-gradient(90deg,var(--magenta),var(--purple-3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.phi-attr{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--w40);font-family:var(--cond);font-weight:600;display:flex;align-items:center;gap:16px}
+.phi-attr::before{content:'';display:block;width:28px;height:1px;background:var(--w15)}
+
+/* ── B.WELL PRIMARY CARE ── */
+.bwell{padding:120px 80px;position:relative;z-index:1}
+.bwell-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;margin-top:16px}
+.bwell-left{}
+.bwell-desc{font-size:15px;line-height:1.8;color:var(--w40);font-weight:300;margin-top:20px;max-width:460px}
+.bwell-desc strong{color:var(--purple-3);font-weight:500}
+.bwell-plans{display:flex;flex-direction:column;gap:2px;margin-top:36px}
+.bplan{display:flex;align-items:center;gap:20px;padding:20px 24px;background:var(--bg-card);border:1px solid var(--w08);transition:all .3s}
+.bplan:hover{border-color:rgba(107,33,232,.4);background:rgba(107,33,232,.07)}
+.bplan-icon{width:36px;height:36px;background:linear-gradient(135deg,var(--purple),var(--magenta));display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.bplan-icon svg{width:16px;height:16px}
+.bplan-name{font-family:var(--cond);font-size:14px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:white}
+.bplan-sub{font-size:12px;color:var(--w40);margin-top:2px;font-weight:300}
+.bwell-price-block{background:linear-gradient(145deg,rgba(107,33,232,.2),rgba(76,15,158,.25));border:1px solid rgba(107,33,232,.45);padding:36px;margin-top:24px}
+.bpb-label{font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:var(--magenta);font-family:var(--cond);font-weight:700;margin-bottom:12px}
+.bpb-price{font-family:var(--display);font-size:72px;line-height:1;color:white;margin-bottom:4px}
+.bpb-note{font-size:12px;color:var(--w40);font-family:var(--cond);margin-bottom:24px}
+.bwell-right{display:flex;flex-direction:column;gap:16px}
+
+/* ── SERVICES INCLUDED ── */
+.services-inc{background:var(--bg-mid);border-top:1px solid var(--w08);border-bottom:1px solid var(--w08);padding:120px 80px;position:relative;z-index:1}
+.si-head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:60px}
+.si-note{font-size:14px;color:var(--w40);max-width:360px;line-height:1.7;font-weight:300;padding-bottom:6px}
+.si-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--w08)}
+.si-card{background:var(--bg-card);padding:36px 32px;position:relative;overflow:hidden;transition:all .3s;cursor:default}
+.si-card::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:linear-gradient(90deg,var(--purple),var(--magenta));transition:width .4s}
+.si-card:hover{background:rgba(107,33,232,.09)}
+.si-card:hover::after{width:100%}
+.si-icon{width:40px;height:2px;background:linear-gradient(90deg,var(--purple),var(--magenta));margin-bottom:22px}
+.si-name{font-family:var(--cond);font-size:19px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:white;line-height:1.15;margin-bottom:10px}
+.si-desc{font-size:12.5px;line-height:1.65;color:var(--w40);font-weight:300}
+
+/* ── PEPTIDE BLENDS ── */
+.blends{padding:120px 80px;position:relative;z-index:1}
+.blends-grid{display:grid;grid-template-columns:1fr 2fr;gap:80px;align-items:start;margin-top:20px}
+.blends-left{}
+.blends-body{font-size:14px;line-height:1.85;color:var(--w40);font-weight:300;margin-top:20px}
+.blends-body p+p{margin-top:14px}
+.blends-body strong{color:var(--purple-3);font-weight:500}
+.blends-right{}
+.blends-intro{font-size:20px;font-weight:300;line-height:1.65;color:var(--w);border-left:2px solid var(--magenta);padding-left:26px;margin-bottom:32px;font-family:var(--cond);letter-spacing:.015em}
+.blend-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--w08)}
+.blend-item{background:var(--bg-mid);padding:22px 24px;display:flex;align-items:center;gap:16px;transition:all .3s;cursor:default}
+.blend-item:hover{background:rgba(107,33,232,.1)}
+.blend-dot{width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,var(--purple),var(--magenta));flex-shrink:0}
+.blend-name{font-family:var(--cond);font-size:14px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:white}
+.blend-sub{font-size:11px;color:var(--w40);margin-top:3px;font-weight:300}
+
+/* ── WEIGHT LOSS FEATURE ── */
+.weight-feature{background:var(--bg-mid);border-top:1px solid var(--w08);border-bottom:1px solid var(--w08);padding:120px 80px;position:relative;z-index:1;overflow:hidden}
+.wf-blob{position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(107,33,232,.14) 0%,transparent 70%);right:-100px;bottom:-100px;pointer-events:none}
+.wf-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.wf-left{}
+.wf-desc{font-size:15px;line-height:1.8;color:var(--w40);font-weight:300;margin-top:20px;max-width:480px}
+.wf-desc strong{color:var(--purple-3);font-weight:500}
+.wf-bullets{display:flex;flex-direction:column;gap:2px;margin-top:36px}
+.wf-bullet{display:flex;gap:20px;align-items:flex-start;padding:22px 24px;background:var(--bg-card);border:1px solid var(--w08);transition:all .3s}
+.wf-bullet:hover{border-color:rgba(107,33,232,.4);background:rgba(107,33,232,.07)}
+.wf-b-icon{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,rgba(107,33,232,.4),rgba(224,64,251,.3));border:1px solid rgba(139,92,246,.4);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.wf-b-icon svg{width:13px;height:13px}
+.wf-b-title{font-family:var(--cond);font-size:14px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:white;margin-bottom:5px}
+.wf-b-desc{font-size:12.5px;color:var(--w40);line-height:1.6;font-weight:300}
+.wf-right{display:flex;flex-direction:column;gap:16px;padding-top:4px}
+.wf-stat-row{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.wf-stat{background:var(--bg-card);border:1px solid var(--w08);padding:32px 28px;text-align:center}
+.wf-stat-val{font-family:var(--display);font-size:56px;line-height:1;background:linear-gradient(135deg,var(--magenta),var(--purple-3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:8px}
+.wf-stat-label{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--w40);font-family:var(--cond);font-weight:600}
+.wf-protocol{background:linear-gradient(145deg,rgba(107,33,232,.2),rgba(76,15,158,.25));border:1px solid rgba(107,33,232,.45);padding:36px}
+.wf-p-title{font-family:var(--display);font-size:28px;color:white;margin-bottom:12px}
+.wf-p-body{font-size:13.5px;color:var(--w70);line-height:1.75;font-weight:300}
+.wf-p-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.wf-p-tag{font-size:9px;letter-spacing:.2em;text-transform:uppercase;background:var(--w08);border:1px solid rgba(139,92,246,.3);padding:5px 12px;color:var(--purple-3);font-family:var(--cond);font-weight:700}
+
+/* ── VITAMIN THERAPY ── */
+.vitamins{padding:120px 80px;position:relative;z-index:1}
+.vit-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.vit-left{}
+.vit-desc{font-size:14.5px;line-height:1.85;color:var(--w40);font-weight:300;margin-top:20px}
+.vit-desc strong{color:var(--purple-3);font-weight:500}
+.vit-types{display:flex;flex-direction:column;gap:2px;margin-top:36px}
+.vit-type{padding:24px 26px;background:var(--bg-card);border:1px solid var(--w08);border-left:2px solid transparent;transition:all .3s}
+.vit-type:hover{border-left-color:var(--magenta);background:rgba(107,33,232,.07)}
+.vt-name{font-family:var(--cond);font-size:17px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:white;margin-bottom:6px}
+.vt-desc{font-size:12.5px;color:var(--w40);line-height:1.6;font-weight:300}
+.vit-right{display:flex;flex-direction:column;gap:16px}
+.vit-highlight{background:var(--bg-card);border:1px solid var(--w08);padding:36px}
+.vh-title{font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:var(--magenta);font-family:var(--cond);font-weight:700;margin-bottom:20px}
+.vh-list{display:flex;flex-direction:column;gap:12px}
+.vh-item{display:flex;align-items:center;gap:14px;font-size:13px;color:var(--w70);font-weight:300}
+.vh-item::before{content:'◆';font-size:6px;color:var(--purple-2);flex-shrink:0}
+.vit-cta{background:linear-gradient(145deg,rgba(107,33,232,.2),rgba(76,15,158,.25));border:1px solid rgba(107,33,232,.45);padding:36px;display:flex;flex-direction:column;gap:16px}
+.vc-h{font-family:var(--display);font-size:32px;color:white;margin-bottom:8px}
+.vc-p{font-size:13px;color:var(--w70);line-height:1.7;font-weight:300}
+
+/* ── CONSULT FORM ── */
+.consult{padding:120px 80px;position:relative;z-index:1}
+.consult-inner{display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:start}
+.consult-left{}
+.consult-promises{display:flex;flex-direction:column;gap:2px;margin-top:36px}
+.cp-item{display:flex;align-items:flex-start;gap:18px;padding:20px 22px;background:var(--bg-card);border:1px solid var(--w08)}
+.cp-dot{width:8px;height:8px;border-radius:50%;background:var(--magenta);box-shadow:0 0 8px var(--magenta);flex-shrink:0;margin-top:5px;animation:pulseDot 2.5s ease infinite}
+.cp-text{font-size:13px;color:var(--w70);line-height:1.6;font-weight:300}
+.cp-text strong{color:white;font-weight:500}
+.consult-form{background:var(--bg-card);border:1px solid var(--w08);padding:48px}
+.cf-title{font-family:var(--display);font-size:36px;color:white;margin-bottom:8px}
+.cf-sub{font-size:13px;color:var(--w40);margin-bottom:36px;font-weight:300;line-height:1.6}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.f-group{display:flex;flex-direction:column;gap:8px;margin-bottom:14px}
+.f-label{font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--w40);font-family:var(--cond);font-weight:700}
+.f-input{background:var(--bg-mid);border:1px solid var(--w15);padding:14px 18px;font-size:14px;color:white;font-family:var(--body);outline:none;transition:border-color .25s;width:100%}
+.f-input:focus{border-color:rgba(139,92,246,.6)}
+.f-input::placeholder{color:var(--w40)}
+.f-select{background:var(--bg-mid);border:1px solid var(--w15);padding:14px 18px;font-size:14px;color:var(--w70);font-family:var(--body);outline:none;transition:border-color .25s;width:100%;appearance:none;cursor:pointer}
+.f-select:focus{border-color:rgba(139,92,246,.6)}
+.f-textarea{background:var(--bg-mid);border:1px solid var(--w15);padding:14px 18px;font-size:14px;color:white;font-family:var(--body);outline:none;transition:border-color .25s;width:100%;resize:vertical;min-height:110px}
+.f-textarea:focus{border-color:rgba(139,92,246,.6)}
+.f-textarea::placeholder{color:var(--w40)}
+.f-submit{width:100%;background:linear-gradient(135deg,var(--purple),var(--magenta));color:white;border:none;padding:16px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;font-family:var(--cond);cursor:pointer;margin-top:8px;transition:all .3s}
+.f-submit:hover{box-shadow:0 10px 32px rgba(224,64,251,.35);transform:translateY(-1px)}
+.f-note{font-size:11px;color:var(--w40);text-align:center;margin-top:14px;font-weight:300;line-height:1.5}
+.f-note a{color:var(--purple-3);text-decoration:none}
+
+/* ── FINAL CTA ── */
+.cta-final{padding:100px 80px;text-align:center;position:relative;z-index:1;overflow:hidden;background:var(--bg-mid);border-top:1px solid var(--w08)}
+.cta-final::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(107,33,232,.15) 0%,transparent 65%);pointer-events:none}
+.ctaf-h{font-family:var(--display);font-size:clamp(52px,7vw,108px);line-height:.9;color:white;margin-bottom:24px;position:relative}
+.ctaf-h span{background:linear-gradient(90deg,var(--magenta),var(--purple-3),var(--magenta));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200%;animation:shimmer 3s linear infinite}
+.ctaf-sub{font-size:15px;color:var(--w40);max-width:480px;margin:0 auto 44px;line-height:1.7;font-weight:300}
+.ctaf-btns{display:flex;align-items:center;justify-content:center;gap:14px}
+.ctaf-contact{margin-top:28px;font-size:11px;color:var(--w40);letter-spacing:.16em;font-family:var(--cond)}
+.ctaf-contact a{color:var(--purple-3);text-decoration:none;transition:color .2s}
+.ctaf-contact a:hover{color:var(--magenta)}
+
+/* ── FOOTER ── */
+footer{background:#07030E;padding:64px 80px 36px;border-top:1px solid var(--w08);position:relative;z-index:1}
+.foot-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:52px;padding-bottom:52px;border-bottom:1px solid var(--w08);margin-bottom:32px}
+.foot-logo{font-family:var(--cond);font-size:19px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:linear-gradient(90deg,white,var(--purple-3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:12px}
+.foot-tagline{font-size:12px;color:var(--w40);line-height:1.7;margin-bottom:16px}
+.foot-addr{font-size:12px;color:var(--w40);line-height:1.85}
+.foot-addr a{color:var(--purple-3);text-decoration:none}
+.foot-col-title{font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:var(--magenta);font-family:var(--cond);font-weight:700;margin-bottom:16px}
+.foot-links{list-style:none;display:flex;flex-direction:column;gap:9px}
+.foot-links a{font-size:12.5px;color:var(--w40);text-decoration:none;font-family:var(--cond);letter-spacing:.04em;transition:color .2s}
+.foot-links a:hover{color:var(--purple-3)}
+.foot-bottom{display:flex;justify-content:space-between;font-size:10.5px;color:var(--w40);font-family:var(--cond);letter-spacing:.08em}
+
+/* ── ANIMATIONS ── */
+@keyframes shimmer{0%{background-position:0% 50%}100%{background-position:200% 50%}}
+@keyframes pulseDot{0%,100%{box-shadow:0 0 6px var(--magenta)}50%{box-shadow:0 0 16px var(--magenta),0 0 28px rgba(224,64,251,.4)}}</style>
+    <style>
+      .reveal,
+      .rev,
+      .reveal.visible,
+      .rev.on {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    </style>
+    <style>
+    html,
+    body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: clip !important;
+    }
+
+    .legacy-page-content {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    .legacy-page-content *,
+    .legacy-page-content *::before,
+    .legacy-page-content *::after {
+      max-width: 100%;
+      min-width: 0;
+    }
+
+    .legacy-page-content img,
+    .legacy-page-content svg,
+    .legacy-page-content video,
+    .legacy-page-content canvas,
+    .legacy-page-content iframe {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .legacy-page-content .float-card,
+    .legacy-page-content .ph-scroll {
+      display: none !important;
+    }
+
+    .legacy-page-content section,
+    .legacy-page-content div,
+    .legacy-page-content nav,
+    .legacy-page-content ul,
+    .legacy-page-content ol,
+    .legacy-page-content li,
+    .legacy-page-content form,
+    .legacy-page-content article,
+    .legacy-page-content aside,
+    .legacy-page-content main,
+    .legacy-page-content header,
+    .legacy-page-content footer {
+      min-width: 0;
+    }
+
+    .legacy-page-content p,
+    .legacy-page-content h1,
+    .legacy-page-content h2,
+    .legacy-page-content h3,
+    .legacy-page-content h4,
+    .legacy-page-content h5,
+    .legacy-page-content h6,
+    .legacy-page-content span,
+    .legacy-page-content a,
+    .legacy-page-content label,
+    .legacy-page-content button {
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+
+    .legacy-page-content .mobile-nav-toggle {
+      display: none;
+    }
+
+    @media (max-width: 1200px) {
+      .legacy-page-content {
+        overflow-x: clip !important;
+      }
+
+      .legacy-page-content nav {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 10px !important;
+        padding: 12px 16px !important;
+      }
+
+      .legacy-page-content .nav-links {
+        width: 100% !important;
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        scrollbar-width: none !important;
+        gap: 8px !important;
+        padding: 2px 0 4px !important;
+        margin: 0 !important;
+      }
+
+      .legacy-page-content .nav-links::-webkit-scrollbar {
+        display: none !important;
+      }
+
+      .legacy-page-content .nav-links li {
+        flex: 0 0 auto !important;
+      }
+
+      .legacy-page-content .nav-links a {
+        display: inline-flex !important;
+        align-items: center !important;
+        min-height: 34px !important;
+        padding: 7px 10px !important;
+        white-space: nowrap !important;
+        border: 1px solid var(--w15) !important;
+        background: rgba(255, 255, 255, 0.03) !important;
+        font-size: 10px !important;
+        letter-spacing: 0.12em !important;
+      }
+
+      .legacy-page-content .nav-links a.nav-btn,
+      .legacy-page-content .nav-links a.n-btn {
+        border: none !important;
+      }
+
+      .legacy-page-content .nav-links a.nav-phone,
+      .legacy-page-content .nav-links a.n-ph {
+        border-color: rgba(167, 139, 250, 0.45) !important;
+      }
+
+      .legacy-page-content .hero,
+      .legacy-page-content .page-hero {
+        min-height: auto !important;
+        padding-top: 196px !important;
+      }
+
+      .legacy-page-content .blob,
+      .legacy-page-content .blob-1,
+      .legacy-page-content .blob-2,
+      .legacy-page-content .hb1,
+      .legacy-page-content .hb2,
+      .legacy-page-content .ph-blob,
+      .legacy-page-content .ph-blob-1,
+      .legacy-page-content .ph-blob-2,
+      .legacy-page-content .wf-blob {
+        max-width: none !important;
+      }
+
+      .legacy-page-content .hero-left,
+      .legacy-page-content .hero-right,
+      .legacy-page-content .ph-right,
+      .legacy-page-content .mission-right,
+      .legacy-page-content .gain-right,
+      .legacy-page-content .int-right,
+      .legacy-page-content .peak-right,
+      .legacy-page-content .custom-right,
+      .legacy-page-content .consult-form,
+      .legacy-page-content .form-box {
+        padding-top: 0 !important;
+      }
+
+      .legacy-page-content .about,
+      .legacy-page-content .mission,
+      .legacy-page-content .gain,
+      .legacy-page-content .philosophy,
+      .legacy-page-content .location,
+      .legacy-page-content .concierge,
+      .legacy-page-content .blends,
+      .legacy-page-content .treatments,
+      .legacy-page-content .anti-aging,
+      .legacy-page-content .membership,
+      .legacy-page-content .services,
+      .legacy-page-content .trifecta,
+      .legacy-page-content .facility,
+      .legacy-page-content .brochure,
+      .legacy-page-content .consult,
+      .legacy-page-content .cta,
+      .legacy-page-content .cta-final,
+      .legacy-page-content .phi-strip,
+      .legacy-page-content .qstrip,
+      .legacy-page-content .bwell,
+      .legacy-page-content .services-inc,
+      .legacy-page-content .weight-feature,
+      .legacy-page-content .vitamins,
+      .legacy-page-content .plans-sec,
+      .legacy-page-content .peak,
+      .legacy-page-content .custom,
+      .legacy-page-content .faq,
+      .legacy-page-content .integrative,
+      .legacy-page-content .intro,
+      .legacy-page-content .financing,
+      .legacy-page-content footer {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+      }
+
+      .legacy-page-content .hero,
+      .legacy-page-content .page-hero,
+      .legacy-page-content .about,
+      .legacy-page-content .mission,
+      .legacy-page-content .gain,
+      .legacy-page-content .philosophy,
+      .legacy-page-content .treatments,
+      .legacy-page-content .anti-aging,
+      .legacy-page-content .membership,
+      .legacy-page-content .services,
+      .legacy-page-content .trifecta,
+      .legacy-page-content .facility,
+      .legacy-page-content .consult,
+      .legacy-page-content .cta,
+      .legacy-page-content .cta-final,
+      .legacy-page-content .bwell,
+      .legacy-page-content .services-inc,
+      .legacy-page-content .weight-feature,
+      .legacy-page-content .vitamins,
+      .legacy-page-content .plans-sec,
+      .legacy-page-content .peak,
+      .legacy-page-content .custom,
+      .legacy-page-content .faq,
+      .legacy-page-content .integrative,
+      .legacy-page-content .intro {
+        padding-top: 72px !important;
+        padding-bottom: 72px !important;
+      }
+
+      .legacy-page-content .hero,
+      .legacy-page-content .page-hero {
+        padding-bottom: 48px !important;
+      }
+
+      .legacy-page-content .hero,
+      .legacy-page-content .page-hero,
+      .legacy-page-content .hgrid,
+      .legacy-page-content .ph-grid,
+      .legacy-page-content .about,
+      .legacy-page-content .mission,
+      .legacy-page-content .gain,
+      .legacy-page-content .philosophy,
+      .legacy-page-content .concierge-grid,
+      .legacy-page-content .location,
+      .legacy-page-content .blends-grid,
+      .legacy-page-content .services-head,
+      .legacy-page-content .treatments-head,
+      .legacy-page-content .bwell-grid,
+      .legacy-page-content .wl-grid,
+      .legacy-page-content .int-grid,
+      .legacy-page-content .consult-inner,
+      .legacy-page-content .consult-inner,
+      .legacy-page-content .con-grid,
+      .legacy-page-content .vit-grid,
+      .legacy-page-content .peak-grid,
+      .legacy-page-content .custom-grid,
+      .legacy-page-content .faq-grid,
+      .legacy-page-content .financing {
+        grid-template-columns: 1fr !important;
+        gap: 28px !important;
+      }
+
+      .legacy-page-content .t-grid,
+      .legacy-page-content .s-grid,
+      .legacy-page-content .sgrid,
+      .legacy-page-content .tri-grid,
+      .legacy-page-content .si-grid,
+      .legacy-page-content .aa-grid,
+      .legacy-page-content .plans,
+      .legacy-page-content .plans-grid,
+      .legacy-page-content .blend-grid,
+      .legacy-page-content .fac-grid,
+      .legacy-page-content .stats,
+      .legacy-page-content .stats-row,
+      .legacy-page-content .wf-stat-row,
+      .legacy-page-content .foot-top,
+      .legacy-page-content .ft-top,
+      .legacy-page-content .qs-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      .legacy-page-content .mission-vals,
+      .legacy-page-content .fac-spec-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      }
+
+      .legacy-page-content .hero-h1,
+      .legacy-page-content .hero-h1-grad,
+      .legacy-page-content .ph-h1,
+      .legacy-page-content .hh1,
+      .legacy-page-content .s-h2,
+      .legacy-page-content .h2,
+      .legacy-page-content .cta-h,
+      .legacy-page-content .ctaf-h,
+      .legacy-page-content .cf-h {
+        font-size: clamp(42px, 13vw, 68px) !important;
+      }
+
+      .legacy-page-content .hero-tagline,
+      .legacy-page-content .ph-tagline,
+      .legacy-page-content .ph-tag,
+      .legacy-page-content .htag,
+      .legacy-page-content .logo-sub,
+      .legacy-page-content .cta-contact,
+      .legacy-page-content .ctaf-contact,
+      .legacy-page-content .cf-contact {
+        letter-spacing: 0.16em !important;
+      }
+
+      .legacy-page-content .ph-lead,
+      .legacy-page-content .hlead,
+      .legacy-page-content .about-intro,
+      .legacy-page-content .mission-intro,
+      .legacy-page-content .gain-intro,
+      .legacy-page-content .intro-quote,
+      .legacy-page-content .int-r-intro,
+      .legacy-page-content .blends-intro {
+        font-size: 17px !important;
+      }
+
+      .legacy-page-content .plan,
+      .legacy-page-content .tc,
+      .legacy-page-content .t-card,
+      .legacy-page-content .s-card,
+      .legacy-page-content .sc,
+      .legacy-page-content .si-card,
+      .legacy-page-content .tri-card,
+      .legacy-page-content .consult-form,
+      .legacy-page-content .form-box,
+      .legacy-page-content .wl-right,
+      .legacy-page-content .fit-card,
+      .legacy-page-content .cust-card {
+        padding: 28px 22px !important;
+      }
+
+      .legacy-page-content .cta-btns,
+      .legacy-page-content .ctaf-btns,
+      .legacy-page-content .cf-btns,
+      .legacy-page-content .hbtns,
+      .legacy-page-content .ph-btns {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 10px !important;
+      }
+
+      .legacy-page-content .btn-g,
+      .legacy-page-content .btn-o,
+      .legacy-page-content .btn-grad,
+      .legacy-page-content .btn-ghost,
+      .legacy-page-content .btn-pg,
+      .legacy-page-content .btn-pf,
+      .legacy-page-content .btn-p-grad,
+      .legacy-page-content .btn-p-ghost {
+        justify-content: center !important;
+        width: 100% !important;
+        text-align: center !important;
+      }
+
+      .legacy-page-content .frow,
+      .legacy-page-content .form-row {
+        grid-template-columns: 1fr !important;
+      }
+
+      .legacy-page-content .foot-bottom,
+      .legacy-page-content .ft-bot {
+        flex-direction: column !important;
+        gap: 10px !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      html,
+      body,
+      .legacy-page-content {
+        width: 100vw !important;
+        max-width: 100vw !important;
+        overflow-x: clip !important;
+      }
+
+      .legacy-page-content nav {
+        display: grid !important;
+        grid-template-columns: 1fr auto !important;
+        align-items: center !important;
+        gap: 8px 12px !important;
+      }
+
+      .legacy-page-content .mobile-nav-toggle {
+        display: inline-flex !important;
+        width: 40px !important;
+        height: 36px !important;
+        border: 1px solid var(--w15) !important;
+        background: rgba(255, 255, 255, 0.04) !important;
+        color: var(--w) !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex-direction: column !important;
+        gap: 4px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        cursor: pointer !important;
+      }
+
+      .legacy-page-content .mobile-nav-toggle span {
+        display: block !important;
+        width: 16px !important;
+        height: 1.5px !important;
+        background: currentColor !important;
+      }
+
+      .legacy-page-content .nav-links {
+        grid-column: 1 / -1 !important;
+        display: none !important;
+        overflow-x: visible !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 6px !important;
+        padding: 6px 0 0 !important;
+      }
+
+      .legacy-page-content nav.nav-open .nav-links {
+        display: flex !important;
+      }
+
+      .legacy-page-content .nav-links li {
+        width: 100% !important;
+      }
+
+      .legacy-page-content .nav-links a {
+        width: 100% !important;
+        justify-content: center !important;
+      }
+
+      .legacy-page-content .logo-name,
+      .legacy-page-content .logo-n {
+        font-size: 18px !important;
+      }
+
+      .legacy-page-content .logo-sub,
+      .legacy-page-content .logo-s {
+        display: none !important;
+      }
+
+      .legacy-page-content .nav-links a {
+        min-height: 32px !important;
+        padding: 6px 9px !important;
+        font-size: 9px !important;
+        letter-spacing: 0.1em !important;
+      }
+
+      .legacy-page-content .hero,
+      .legacy-page-content .page-hero {
+        padding-top: 132px !important;
+      }
+
+      .legacy-page-content .page-hero {
+        padding-bottom: 36px !important;
+      }
+
+      .legacy-page-content .ph-crumb,
+      .legacy-page-content .ph-breadcrumb {
+        margin-bottom: 14px !important;
+        font-size: 8px !important;
+        letter-spacing: 0.16em !important;
+        gap: 8px !important;
+      }
+
+      .legacy-page-content .page-hero-inner {
+        gap: 16px !important;
+      }
+
+      .legacy-page-content .ph-h1 {
+        font-size: clamp(44px, 16vw, 64px) !important;
+      }
+
+      .legacy-page-content .ph-tagline {
+        font-size: 10px !important;
+        letter-spacing: 0.14em !important;
+        margin-bottom: 10px !important;
+      }
+
+      .legacy-page-content .ph-lead {
+        font-size: 15px !important;
+        line-height: 1.55 !important;
+        margin-bottom: 14px !important;
+      }
+
+      .legacy-page-content .ph-btns {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 8px !important;
+      }
+
+      .legacy-page-content .services-inc .si-head {
+        margin-bottom: 24px !important;
+      }
+
+      .legacy-page-content .services-inc .si-note {
+        max-width: 100% !important;
+        font-size: 13px !important;
+      }
+
+      .legacy-page-content .services-inc .si-grid {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+        background: transparent !important;
+      }
+
+      .legacy-page-content .services-inc .si-card {
+        padding: 22px 18px !important;
+        border: 1px solid var(--w08) !important;
+      }
+
+      .legacy-page-content .services-inc .si-icon {
+        margin-bottom: 14px !important;
+      }
+
+      .legacy-page-content .services-inc .si-name {
+        font-size: 16px !important;
+        line-height: 1.2 !important;
+        margin-bottom: 8px !important;
+      }
+
+      .legacy-page-content .services-inc .si-desc {
+        font-size: 12.5px !important;
+        line-height: 1.55 !important;
+      }
+
+      .legacy-page-content .intro {
+        gap: 20px !important;
+      }
+
+      .legacy-page-content .intro .intro-quote {
+        font-size: 17px !important;
+        line-height: 1.55 !important;
+        margin-bottom: 18px !important;
+      }
+
+      .legacy-page-content .intro .intro-body {
+        font-size: 13.5px !important;
+        line-height: 1.72 !important;
+      }
+
+      .legacy-page-content .intro .tri-blocks {
+        gap: 10px !important;
+        margin-top: 16px !important;
+      }
+
+      .legacy-page-content .intro .tri-block {
+        gap: 12px !important;
+        padding: 18px 16px !important;
+      }
+
+      .legacy-page-content .intro .tb-icon {
+        width: 30px !important;
+        height: 30px !important;
+      }
+
+      .legacy-page-content .intro .tb-title {
+        font-size: 13px !important;
+        margin-bottom: 4px !important;
+      }
+
+      .legacy-page-content .intro .tb-desc {
+        font-size: 12px !important;
+        line-height: 1.5 !important;
+      }
+
+      .legacy-page-content .services .s-head {
+        margin-bottom: 22px !important;
+      }
+
+      .legacy-page-content .services .s-note {
+        max-width: 100% !important;
+        font-size: 13px !important;
+      }
+
+      .legacy-page-content .services .sgrid {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+        background: transparent !important;
+      }
+
+      .legacy-page-content .services .sc {
+        padding: 22px 18px !important;
+        border: 1px solid var(--w08) !important;
+      }
+
+      .legacy-page-content .services .sc-n {
+        font-size: 42px !important;
+        top: 14px !important;
+        right: 14px !important;
+      }
+
+      .legacy-page-content .services .sc-tag {
+        margin-bottom: 12px !important;
+      }
+
+      .legacy-page-content .services .sc-name {
+        font-size: 17px !important;
+        margin-bottom: 8px !important;
+      }
+
+      .legacy-page-content .services .sc-desc {
+        font-size: 12.5px !important;
+        line-height: 1.55 !important;
+      }
+
+      .legacy-page-about .page-hero {
+        min-height: auto !important;
+      }
+
+      .legacy-page-about .page-hero-inner {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        align-items: start !important;
+        gap: 14px !important;
+      }
+
+      .legacy-page-about .page-hero-inner > div:first-child {
+        order: 1 !important;
+      }
+
+      .legacy-page-about .page-hero-inner .ph-right {
+        order: 2 !important;
+      }
+
+      .legacy-page-about .ph-h1 {
+        font-size: clamp(46px, 17vw, 68px) !important;
+        line-height: 0.9 !important;
+        margin: 0 !important;
+      }
+
+      .legacy-page-about .ph-right {
+        padding-bottom: 0 !important;
+      }
+
+      .legacy-page-about .ph-btns a {
+        width: 100% !important;
+      }
+
+      .legacy-page-concierge .services-inc .si-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+      }
+
+      .legacy-page-about .services-head,
+      .legacy-page-concierge .si-head,
+      .legacy-page-regenerative .s-head,
+      .legacy-page-anti-aging .t-head {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        justify-content: flex-start !important;
+        gap: 10px !important;
+        margin-bottom: 22px !important;
+      }
+
+      .legacy-page-about .services-note,
+      .legacy-page-concierge .si-note,
+      .legacy-page-regenerative .s-note,
+      .legacy-page-anti-aging .t-note {
+        max-width: 100% !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        font-size: 13px !important;
+        line-height: 1.6 !important;
+      }
+
+      .legacy-page-about .s-grid,
+      .legacy-page-concierge .si-grid,
+      .legacy-page-regenerative .sgrid,
+      .legacy-page-anti-aging .t-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+        background: transparent !important;
+      }
+
+      .legacy-page-about .s-card,
+      .legacy-page-concierge .si-card,
+      .legacy-page-regenerative .sc,
+      .legacy-page-anti-aging .tc {
+        padding: 22px 18px !important;
+        border: 1px solid var(--w08) !important;
+      }
+
+      .legacy-page-about .s-card-num,
+      .legacy-page-regenerative .sc-n,
+      .legacy-page-anti-aging .tc-n {
+        font-size: 42px !important;
+        top: 14px !important;
+        right: 14px !important;
+      }
+
+      .legacy-page-about .s-card-name,
+      .legacy-page-concierge .si-name,
+      .legacy-page-regenerative .sc-name,
+      .legacy-page-anti-aging .tc-name {
+        font-size: 17px !important;
+        line-height: 1.2 !important;
+        margin-bottom: 8px !important;
+      }
+
+      .legacy-page-about .s-card-desc,
+      .legacy-page-concierge .si-desc,
+      .legacy-page-regenerative .sc-desc,
+      .legacy-page-anti-aging .tc-desc {
+        font-size: 12.5px !important;
+        line-height: 1.55 !important;
+      }
+
+      .legacy-page-anti-aging .tc-tag,
+      .legacy-page-regenerative .sc-tag,
+      .legacy-page-about .s-card-tag {
+        margin-bottom: 12px !important;
+      }
+
+      .legacy-page-anti-aging .tc-link {
+        margin-top: 14px !important;
+      }
+
+      .legacy-page-concierge .services-inc .si-card {
+        border: 1px solid var(--w08) !important;
+        border-radius: 0 !important;
+      }
+
+      .legacy-page-regenerative .intro {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+      }
+
+      .legacy-page-regenerative .intro .tri-blocks {
+        gap: 10px !important;
+        margin-top: 16px !important;
+      }
+
+      .legacy-page-regenerative .services .sgrid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+      }
+
+      .legacy-page-regenerative .services .sc {
+        border: 1px solid var(--w08) !important;
+      }
+
+      .legacy-page-content .mission-vals,
+      .legacy-page-content .fac-spec-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      .legacy-page-content .stat-v,
+      .legacy-page-content .sv,
+      .legacy-page-content .stat-val,
+      .legacy-page-content .wf-stat-val {
+        font-size: 42px !important;
+      }
+
+      .legacy-page-content .p-price,
+      .legacy-page-content .wl-price,
+      .legacy-page-content .wlc-price,
+      .legacy-page-content .bpb-price,
+      .legacy-page-content .fin-stat-v {
+        font-size: 52px !important;
+      }
+    }
+  </style>
+  </head>
+  <body>
+    <section class="legacy-page-content legacy-page-concierge">
+      <!-- NAV -->
+<nav>
+  <a href="/pure-renewal/" class="logo-wrap">
+    <span class="logo-name">Pure Renewal</span>
+    <span class="logo-sub">Regenerative Concierge Medicine · Orlando, FL</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/pure-renewal/about">About</a></li>
+    <li><a href="/pure-renewal/concierge" class="active">Concierge</a></li>
+    <li><a href="/pure-renewal/regenerative">Regenerative</a></li>
+    <li><a href="/pure-renewal/anti-aging">Anti-Aging</a></li>
+    <li><a href="/pure-renewal/memberships">Memberships</a></li>
+    <li><a href="tel:4073330496" class="nav-phone">(407) 333-0496</a></li>
+    <li><a href="#consult" class="nav-btn">Book Now</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="ph-blob ph-blob-1"></div>
+  <div class="ph-blob ph-blob-2"></div>
+  <div class="ph-crumb">Pure Renewal <span>/ Concierge Medicine</span></div>
+  <div class="ph-grid">
+    <h1 class="ph-h1">CONCIERGE<br><span>MEDICINE.</span></h1>
+    <div class="ph-right">
+      <div class="ph-tag">Comprehensive · Physician-Led · Personalized</div>
+      <p class="ph-lead">
+        With concierge medicine, you gain <strong>direct access to your physician</strong>, a wellness plan designed for your unique needs, and a team invested in every step of your journey. This is more than healthcare — it's a <strong>commitment to vitality, resilience, and living life fully.</strong>
+      </p>
+      <div class="ph-btns">
+        <a href="#consult" class="btn-grad">Request a Consultation</a>
+        <a href="#bwell" class="btn-ghost">Our Plans →</a>
+      </div>
+    </div>
+  </div>
+  <div class="ph-scroll">Scroll to explore</div>
+</section>
+
+<!-- WHAT YOU GAIN -->
+<section class="gain">
+  <div class="reveal">
+    <div class="s-eye">With Concierge Medicine</div>
+    <h2 class="s-h2">What You<br><span>Gain.</span></h2>
+    <div class="gain-items">
+      <div class="gain-item">
+        <div class="gain-num">01</div>
+        <div class="gain-content">
+          <div class="gain-title">Personalized Care</div>
+          <div class="gain-desc">Direct access to your physician and a wellness plan designed for your unique needs — not a generic protocol. Your biology, your goals, your plan.</div>
+        </div>
+      </div>
+      <div class="gain-item">
+        <div class="gain-num">02</div>
+        <div class="gain-content">
+          <div class="gain-title">Proactive Health Management</div>
+          <div class="gain-desc">Advanced testing and therapies that prevent disease, rather than just treating it. We stay ahead of imbalance through continuous biomarker monitoring.</div>
+        </div>
+      </div>
+      <div class="gain-item">
+        <div class="gain-num">03</div>
+        <div class="gain-content">
+          <div class="gain-title">Whole-Body Optimization</div>
+          <div class="gain-desc">From cellular repair to immune enhancement, every protocol is crafted to elevate long-term wellness — mind, body, and biological age.</div>
+        </div>
+      </div>
+      <div class="gain-item">
+        <div class="gain-num">04</div>
+        <div class="gain-content">
+          <div class="gain-title">A True Partnership</div>
+          <div class="gain-desc">Time, attention, and expertise dedicated to guiding you toward your best health — with a physician invested in every step of your journey.</div>
+        </div>
+      </div>
+      <div class="gain-item">
+        <div class="gain-num">05</div>
+        <div class="gain-content">
+          <div class="gain-title">Physician Managed Weight Loss</div>
+          <div class="gain-desc">Utilizing the latest and most effective weight loss therapies for lasting results — including GLP-1, GLP-2, and GLP-3 with microdosing peptide therapy.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gain-right reveal rd1">
+    <p class="gain-intro">
+      Our multidisciplinary team of board-certified specialists deliver truly comprehensive care in a State of Florida–approved, Level 3 surgical and clinical environment.
+    </p>
+    <div class="gain-body">
+      <p>We combine <strong>cutting-edge medical innovation</strong> with personalized, concierge-level care to create transformative outcomes for every patient. No waiting rooms, no rushed appointments, no one-size-fits-all protocols.</p>
+      <p>At Pure Renewal, your physician knows your name, your history, your goals, and your biology. Every interaction is an opportunity to <strong>refine your protocol</strong>, answer your questions, and push your health further than conventional medicine thought possible.</p>
+      <p>This is more than healthcare — it's a commitment to vitality, resilience, and living life fully, with a physician who is invested in every step of your journey.</p>
+    </div>
+    <div class="gain-specialties">
+      <div class="gs-title">Board-Certified Specialties</div>
+      <div class="gs-tags">
+        <span class="gs-tag">Neurosurgery</span>
+        <span class="gs-tag">Orthopedic Surgery</span>
+        <span class="gs-tag">Pain Management</span>
+        <span class="gs-tag">Regenerative Medicine</span>
+        <span class="gs-tag">Integrative Oncology</span>
+        <span class="gs-tag">Internal Medicine</span>
+        <span class="gs-tag">Preventive Medicine</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE STRIP -->
+<div class="phi-strip reveal">
+  <p class="phi-quote">"This is more than healthcare — it's a commitment to <span>vitality, resilience, and living life fully,</span> with a physician who is invested in every step of your journey."</p>
+  <div class="phi-attr">Pure Renewal · Concierge Philosophy</div>
+</div>
+
+<!-- B.WELL PRIMARY CARE -->
+<section class="bwell" id="bwell">
+  <div class="bwell-grid">
+    <div class="reveal">
+      <div class="s-eye">Primary Care</div>
+      <h2 class="s-h2">B. Well<br><span>Primary Care.</span></h2>
+      <p class="bwell-desc">Our concierge primary care model removes the barriers of traditional medicine. <strong>No wait times, no rushed visits, no assembly-line care.</strong> Direct access to your physician — when you need it, how you need it.</p>
+
+      <div class="bwell-plans">
+        <div class="bplan">
+          <div class="bplan-icon">
+            <svg viewBox="0 0 16 16" fill="none"><rect x="3" y="3" width="10" height="10" rx="1.5" stroke="white" stroke-width="1.1"/><path d="M6 8h4M8 6v4" stroke="white" stroke-width="1.1" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <div class="bplan-name">In-Office Appointments</div>
+            <div class="bplan-sub">801 N. Orange Ave, Suite 710 · Downtown Orlando</div>
+          </div>
+        </div>
+        <div class="bplan">
+          <div class="bplan-icon">
+            <svg viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="10" rx="1.5" stroke="white" stroke-width="1.1"/><path d="M6 7l2 2 2-2" stroke="white" stroke-width="1" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <div class="bplan-name">Tele-Health Visits</div>
+            <div class="bplan-sub">Video or phone — connect from anywhere</div>
+          </div>
+        </div>
+        <div class="bplan">
+          <div class="bplan-icon">
+            <svg viewBox="0 0 16 16" fill="none"><path d="M8 2a6 6 0 100 12A6 6 0 008 2zm0 2.5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm0 7.5a4.5 4.5 0 01-3.46-1.62C5.07 9.5 6.47 9 8 9s2.93.5 3.46 1.38A4.5 4.5 0 018 12z" fill="white"/></svg>
+          </div>
+          <div>
+            <div class="bplan-name">Individual Plans</div>
+            <div class="bplan-sub">Personalized membership for one</div>
+          </div>
+        </div>
+        <div class="bplan">
+          <div class="bplan-icon">
+            <svg viewBox="0 0 16 16" fill="none"><path d="M5.5 7a2 2 0 100-4 2 2 0 000 4zm5 0a2 2 0 100-4 2 2 0 000 4zM1 13c0-2.21 2.015-4 4.5-4s4.5 1.79 4.5 4M10.5 9c1.38 0 2.5 1.12 2.5 2.5V13" stroke="white" stroke-width="1.1" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <div class="bplan-name">Family Plans</div>
+            <div class="bplan-sub">Comprehensive care for the whole family</div>
+          </div>
+        </div>
+        <div class="bplan">
+          <div class="bplan-icon">
+            <svg viewBox="0 0 16 16" fill="none"><rect x="2" y="6" width="12" height="8" rx="1" stroke="white" stroke-width="1.1"/><path d="M5 6V4.5a3 3 0 016 0V6" stroke="white" stroke-width="1.1" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <div class="bplan-name">Small Business Plans</div>
+            <div class="bplan-sub">Protect your team with premium healthcare</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bwell-price-block">
+        <div class="bpb-label">Starting From</div>
+        <div class="bpb-price">$249</div>
+        <div class="bpb-note">/ month per plan · 0% patient financing available</div>
+        <a href="#consult" class="btn-grad">Get Started Today</a>
+      </div>
+    </div>
+
+    <div class="bwell-right reveal rd1">
+      <!-- Services included cards -->
+      <div style="background:var(--bg-card);border:1px solid var(--w08);padding:32px">
+        <div style="font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:var(--magenta);font-family:var(--cond);font-weight:700;margin-bottom:20px">Included in All B.Well Plans</div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <div style="display:flex;align-items:center;gap:14px;font-size:13px;color:var(--w70);font-weight:300"><span style="font-size:6px;color:var(--purple-2)">◆</span> Physician-led weight loss — GLP-1, 2 and 3</div>
+          <div style="display:flex;align-items:center;gap:14px;font-size:13px;color:var(--w70);font-weight:300"><span style="font-size:6px;color:var(--purple-2)">◆</span> Tailored vitamin therapy for your unique needs</div>
+          <div style="display:flex;align-items:center;gap:14px;font-size:13px;color:var(--w70);font-weight:300"><span style="font-size:6px;color:var(--purple-2)">◆</span> IV Vita Infusions — restore lost nutrients</div>
+          <div style="display:flex;align-items:center;gap:14px;font-size:13px;color:var(--w70);font-weight:300"><span style="font-size:6px;color:var(--purple-2)">◆</span> High-Dose Vitamin C infusions</div>
+          <div style="display:flex;align-items:center;gap:14px;font-size:13px;color:var(--w70);font-weight:300"><span style="font-size:6px;color:var(--purple-2)">◆</span> Nutritional supplements — physician-curated</div>
+          <div style="display:flex;align-items:center;gap:14px;font-size:13px;color:var(--w70);font-weight:300"><span style="font-size:6px;color:var(--purple-2)">◆</span> Ozone therapy protocols</div>
+          <div style="display:flex;align-items:center;gap:14px;font-size:13px;color:var(--w70);font-weight:300"><span style="font-size:6px;color:var(--purple-2)">◆</span> Red light therapy sessions</div>
+          <div style="display:flex;align-items:center;gap:14px;font-size:13px;color:var(--w70);font-weight:300"><span style="font-size:6px;color:var(--purple-2)">◆</span> Specialty peptide therapy blends</div>
+        </div>
+      </div>
+
+      <div style="background:linear-gradient(145deg,rgba(107,33,232,.2),rgba(76,15,158,.25));border:1px solid rgba(107,33,232,.45);padding:36px">
+        <div style="font-family:var(--display);font-size:28px;color:white;margin-bottom:12px">Real Results. Real Patients.</div>
+        <p style="font-size:13.5px;color:var(--w70);line-height:1.75;font-weight:300">Physician weight loss with microdosing peptide therapy that targets fat loss and protects muscle mass. Our FIT/SLIM Protocol combines the latest GLP-1/2/3 science with precision peptide microdosing — backed by real patient outcomes and continuous physician oversight.</p>
+        <div style="margin-top:20px;display:flex;gap:2px">
+          <div style="background:var(--w08);padding:20px;flex:1;text-align:center">
+            <div style="font-family:var(--display);font-size:42px;line-height:1;background:linear-gradient(135deg,var(--magenta),var(--purple-3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:6px">GLP-1</div>
+            <div style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--w40);font-family:var(--cond);font-weight:600">Semaglutide</div>
+          </div>
+          <div style="background:var(--w08);padding:20px;flex:1;text-align:center">
+            <div style="font-family:var(--display);font-size:42px;line-height:1;background:linear-gradient(135deg,var(--magenta),var(--purple-3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:6px">GLP-2</div>
+            <div style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--w40);font-family:var(--cond);font-weight:600">Teduglutide</div>
+          </div>
+          <div style="background:var(--w08);padding:20px;flex:1;text-align:center">
+            <div style="font-family:var(--display);font-size:42px;line-height:1;background:linear-gradient(135deg,var(--magenta),var(--purple-3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:6px">GLP-3</div>
+            <div style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--w40);font-family:var(--cond);font-weight:600">Retatrutide</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES INCLUDED -->
+<section class="services-inc">
+  <div class="si-head reveal">
+    <div>
+      <div class="s-eye">Concierge Services</div>
+      <h2 class="s-h2">Everything<br><span>Included.</span></h2>
+    </div>
+    <p class="si-note">All concierge plans include access to our full suite of restorative services — physician-led and tailored to your biology.</p>
+  </div>
+
+  <div class="si-grid">
+    <div class="si-card reveal">
+      <div class="si-icon"></div>
+      <div class="si-name">Physician-Led Weight Loss</div>
+      <div class="si-desc">GLP-1, 2 and 3 protocols with microdosing peptide therapy. Real results, real patients — targeting fat loss while preserving lean muscle mass.</div>
+    </div>
+    <div class="si-card reveal rd1">
+      <div class="si-icon"></div>
+      <div class="si-name">Tailored Vitamin Therapy</div>
+      <div class="si-desc">Physician-formulated vitamin protocols customized to your specific deficiencies, lifestyle, and health objectives.</div>
+    </div>
+    <div class="si-card reveal rd2">
+      <div class="si-icon"></div>
+      <div class="si-name">IV Vita Infusions</div>
+      <div class="si-desc">Intravenous delivery of essential vitamins, minerals, and nutrients directly into the bloodstream for maximum absorption and effect.</div>
+    </div>
+    <div class="si-card reveal">
+      <div class="si-icon"></div>
+      <div class="si-name">Hi-Dose Vitamin C</div>
+      <div class="si-desc">High-dose IV Vitamin C for immune fortification, oxidative therapy, and supportive oncology care.</div>
+    </div>
+    <div class="si-card reveal rd1">
+      <div class="si-icon"></div>
+      <div class="si-name">Nutritional Supplements</div>
+      <div class="si-desc">Physician-curated supplement protocols designed to complement your regenerative therapy plan and support ongoing vitality.</div>
+    </div>
+    <div class="si-card reveal rd2">
+      <div class="si-icon"></div>
+      <div class="si-name">Ozone Therapy</div>
+      <div class="si-desc">Targeted ozone protocols enhancing oxygen efficiency, activating immune function, and elevating cellular vitality.</div>
+    </div>
+    <div class="si-card reveal">
+      <div class="si-icon"></div>
+      <div class="si-name">Red Light Therapy</div>
+      <div class="si-desc">Photobiomodulation for tissue repair, inflammation reduction, skin health, and accelerated healing. Heal faster, feel better, age gracefully.</div>
+    </div>
+    <div class="si-card reveal rd1">
+      <div class="si-icon"></div>
+      <div class="si-name">Specialty Peptide Blends</div>
+      <div class="si-desc">14 physician-formulated peptide blends targeting every aspect of health — from longevity and immune support to cognitive enhancement and athletic recovery.</div>
+    </div>
+    <div class="si-card reveal rd2">
+      <div class="si-icon"></div>
+      <div class="si-name">Ongoing Physician Support</div>
+      <div class="si-desc">Direct access to your physician for questions, protocol adjustments, and continuous monitoring — no waitlists, no delays.</div>
+    </div>
+  </div>
+</section>
+
+<!-- PEPTIDE BLENDS -->
+<section class="blends">
+  <div class="blends-grid">
+    <div class="reveal">
+      <div class="s-eye">Specialty Peptide Blends</div>
+      <h2 class="s-h2">Tailored<br>to<br><span>You.</span></h2>
+      <div class="blends-body">
+        <p>Our specialty peptide blends are <strong>physician-formulated combinations</strong> designed to address your specific health goals — from athletic recovery to hormonal balance, cognitive enhancement to longevity.</p>
+        <p>Each blend is precisely dosed, evidence-based, and continuously monitored by your physician. This is peptide therapy as it was meant to be practiced: <strong>personalized, powerful, and physician-led.</strong></p>
+      </div>
+    </div>
+    <div class="blends-right reveal rd1">
+      <p class="blends-intro">14 precision peptide protocols — one for every dimension of your health and performance.</p>
+      <div class="blend-grid">
+        <div class="blend-item">
+          <div class="blend-dot"></div>
+          <div><div class="blend-name">Anti-COVID</div><div class="blend-sub">Immune resilience support</div></div>
+        </div>
+        <div class="blend-item">
+          <div class="blend-dot"></div>
+          <div><div class="blend-name">Longevity</div><div class="blend-sub">Cellular age reversal</div></div>
+        </div>
+        <div class="blend-item">
+          <div class="blend-dot"></div>
+          <div><div class="blend-name">Sleep &amp; Beauty</div><div class="blend-sub">Rest + skin regeneration</div></div>
+        </div>
+        <div class="blend-item">
+          <div class="blend-dot"></div>
+          <div><div class="blend-name">Immune Support</div><div class="blend-sub">Fortify your defenses</div></div>
+        </div>
+        <div class="blend-item">
+          <div class="blend-dot"></div>
+          <div><div class="blend-name">Arthritis Support</div><div class="blend-sub">Joint health &amp; mobility</div></div>
+        </div>
+        <div class="blend-item">
+          <div class="blend-dot"></div>
+          <div><div class="blend-name">Muscle Definition</div><div class="blend-sub">Lean mass &amp; recovery</div></div>
+        </div>
+        <div class="blend-item">
+          <div class="blend-dot"></div>
+          <div><div class="blend-name">Peri &amp; Menopause</div><div class="blend-sub">Hormonal balance</div></div>
+        </div>
+        <div class="blend-item">
+          <div class="blend-dot"></div>
+          <div><div class="blend-name">Libido Enhancement</div><div class="blend-sub">Drive &amp; vitality</div></div>
+        </div>
+        <div class="blend-item">
+          <div class="blend-dot"></div>
+          <div><div class="blend-name">Anti-Anxiety / Stress</div><div class="blend-sub">Calm &amp; resilience</div></div>
+        </div>
+        <div class="blend-item">
+          <div class="blend-dot"></div>
+          <div><div class="blend-name">Erectile Dysfunction</div><div class="blend-sub">Performance restoration</div></div>
+        </div>
+        <div class="blend-item">
+          <div class="blend-dot"></div>
+          <div><div class="blend-name">Athlete Recovery</div><div class="blend-sub">Peak performance</div></div>
+        </div>
+        <div class="blend-item">
+          <div class="blend-dot"></div>
+          <div><div class="blend-name">Injury Support</div><div class="blend-sub">Accelerated healing</div></div>
+        </div>
+        <div class="blend-item">
+          <div class="blend-dot"></div>
+          <div><div class="blend-name">Brain Booster</div><div class="blend-sub">Mental acuity &amp; focus</div></div>
+        </div>
+        <div class="blend-item">
+          <div class="blend-dot"></div>
+          <div><div class="blend-name">Energy &amp; Mitochondria</div><div class="blend-sub">Cellular energy restore</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONSULT FORM -->
+<section class="consult" id="consult" style="background:var(--bg-mid);border-top:1px solid var(--w08)">
+  <div class="consult-inner">
+    <div class="reveal">
+      <div class="s-eye">Request a Consultation</div>
+      <h2 class="s-h2">Start Your<br><span>Journey.</span></h2>
+      <p style="font-size:14px;color:var(--w40);line-height:1.75;font-weight:300;margin-top:16px;margin-bottom:36px">Every new patient begins with a complimentary physician consultation — no pressure, no commitments. Just a real conversation about your health, your goals, and what concierge medicine can do for you.</p>
+      <div class="consult-promises">
+        <div class="cp-item"><div class="cp-dot"></div><div class="cp-text"><strong>Complimentary consultation</strong> — full physician evaluation at no cost.</div></div>
+        <div class="cp-item"><div class="cp-dot"></div><div class="cp-text"><strong>No wait times</strong> — direct physician access from day one.</div></div>
+        <div class="cp-item"><div class="cp-dot"></div><div class="cp-text"><strong>Plans from $249/month</strong> — individual, family &amp; small business plans available.</div></div>
+        <div class="cp-item"><div class="cp-dot"></div><div class="cp-text"><strong>0% patient financing</strong> — flexible payment plans with no interest.</div></div>
+        <div class="cp-item"><div class="cp-dot"></div><div class="cp-text"><strong>Tele-health available</strong> — connect from anywhere via video or phone.</div></div>
+      </div>
+    </div>
+
+    <div class="consult-form reveal rd1">
+      <div class="cf-title">Request Consult</div>
+      <p class="cf-sub">Our team will reach out within 24 hours to schedule your complimentary physician consultation.</p>
+      <div class="f-row">
+        <div class="f-group"><label class="f-label">First Name</label><input class="f-input" type="text" placeholder="John"></div>
+        <div class="f-group"><label class="f-label">Last Name</label><input class="f-input" type="text" placeholder="Doe"></div>
+      </div>
+      <div class="f-row">
+        <div class="f-group"><label class="f-label">Email Address</label><input class="f-input" type="email" placeholder="john@email.com"></div>
+        <div class="f-group"><label class="f-label">Phone Number</label><input class="f-input" type="tel" placeholder="(407) 000-0000"></div>
+      </div>
+      <div class="f-group">
+        <label class="f-label">Plan of Interest</label>
+        <select class="f-select">
+          <option value="" disabled selected style="color:#666">Select a plan type</option>
+          <option>Individual Plan — from $249/month</option>
+          <option>Family Plan</option>
+          <option>Small Business Plan</option>
+          <option>Physician Weight Loss (GLP-1/2/3)</option>
+          <option>Peptide Therapy Membership</option>
+          <option>Not sure — help me choose</option>
+        </select>
+      </div>
+      <div class="f-group">
+        <label class="f-label">Preferred Visit Type</label>
+        <select class="f-select">
+          <option value="" disabled selected style="color:#666">In-office or Tele-health?</option>
+          <option>In-Office · 801 N. Orange Ave, Orlando</option>
+          <option>Tele-Health (Video)</option>
+          <option>Tele-Health (Phone)</option>
+          <option>No preference</option>
+        </select>
+      </div>
+      <div class="f-group">
+        <label class="f-label">Health Goals or Questions</label>
+        <textarea class="f-textarea" placeholder="Tell us what you're hoping to achieve with concierge care at Pure Renewal..."></textarea>
+      </div>
+      <button class="f-submit" type="button" onclick="this.textContent='Request Sent ✓';this.style.background='linear-gradient(135deg,#1a6b2a,#2d8a40)'">Submit Consultation Request</button>
+      <p class="f-note">All information is handled in strict confidence. · <a href="tel:4073330496">(407) 333-0496</a> · <a href="mailto:info@pure-renewal.com">info@pure-renewal.com</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cta-final">
+  <h2 class="ctaf-h">YOUR VITALITY.<br><span>OUR MISSION.</span></h2>
+  <p class="ctaf-sub">Concierge medicine the way it was meant to be — personal, proactive, and physician-led. We're ready when you are.</p>
+  <div class="ctaf-btns">
+    <a href="tel:4073330496" class="btn-grad">Call (407) 333-0496</a>
+    <a href="mailto:info@pure-renewal.com" class="btn-ghost">Email Us →</a>
+  </div>
+  <p class="ctaf-contact">801 N. Orange Ave, Suite 710 · Downtown Orlando, FL 32801 · <a href="mailto:info@pure-renewal.com">info@pure-renewal.com</a></p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-top">
+    <div>
+      <div class="foot-logo">Pure Renewal</div>
+      <p class="foot-tagline">Regenerative Concierge Medicine.<br>Where Science Meets Cellular Renewal.</p>
+      <div class="foot-addr">801 N. Orange Ave, Suite 710<br>Orlando, FL 32801<br><br><a href="tel:4073330496">(407) 333-0496</a><br><a href="mailto:info@pure-renewal.com">info@pure-renewal.com</a></div>
+    </div>
+    <div>
+      <div class="foot-col-title">Regenerative</div>
+      <ul class="foot-links">
+        <li><a href="#">EBOO Therapy</a></li>
+        <li><a href="#">Ozone Therapy</a></li>
+        <li><a href="#">Nano NAD+</a></li>
+        <li><a href="#">Peptide Therapy</a></li>
+        <li><a href="#">Stem Cell Therapy</a></li>
+        <li><a href="#">IV Infusions</a></li>
+        <li><a href="#">Hi-Dose Vitamin C</a></li>
+        <li><a href="#">PNOĒ Testing</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="foot-col-title">Services</div>
+      <ul class="foot-links">
+        <li><a href="/pure-renewal/anti-aging">Anti-Aging</a></li>
+        <li><a href="#">Concierge Care</a></li>
+        <li><a href="#">Weight Loss</a></li>
+        <li><a href="#">Cognitive Enhancement</a></li>
+        <li><a href="#">Male Performance</a></li>
+        <li><a href="#">Integrative Oncology</a></li>
+        <li><a href="#">Genetic Bio-Testing</a></li>
+        <li><a href="#">Red Light Therapy</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="foot-col-title">Contact</div>
+      <ul class="foot-links">
+        <li><a href="#consult">Book Consultation</a></li>
+        <li><a href="/pure-renewal/memberships">Memberships</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">View Brochure</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="tel:4073330496">(407) 333-0496</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 Pure Renewal Regenerative Concierge Medicine · Orlando, FL</span>
+    <span>801 N. Orange Ave, Suite 710 · All rights reserved</span>
+  </div>
+</footer>
+
+
+    </section>
+    <script>
+    (() => {
+      const initMobileNav = () => {
+        const navs = document.querySelectorAll('.legacy-page-content nav')
+
+        navs.forEach((nav, index) => {
+          if (nav.dataset.mobileNavInit === '1') {
+            return
+          }
+
+          const links = nav.querySelector('.nav-links')
+          if (!links) {
+            return
+          }
+
+          nav.dataset.mobileNavInit = '1'
+
+          const toggle = document.createElement('button')
+          toggle.type = 'button'
+          toggle.className = 'mobile-nav-toggle'
+          toggle.setAttribute('aria-label', 'Toggle navigation menu')
+          toggle.setAttribute('aria-expanded', 'false')
+
+          const linksId = links.id || 'legacy-mobile-nav-links-' + index
+          links.id = linksId
+          toggle.setAttribute('aria-controls', linksId)
+          toggle.innerHTML = '<span></span><span></span><span></span>'
+
+          toggle.addEventListener('click', () => {
+            const isOpen = nav.classList.toggle('nav-open')
+            toggle.setAttribute('aria-expanded', String(isOpen))
+          })
+
+          nav.insertBefore(toggle, links)
+
+          links.querySelectorAll('a').forEach((anchor) => {
+            anchor.addEventListener('click', () => {
+              if (window.matchMedia('(max-width: 768px)').matches) {
+                nav.classList.remove('nav-open')
+                toggle.setAttribute('aria-expanded', 'false')
+              }
+            })
+          })
+        })
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initMobileNav, { once: true })
+      } else {
+        initMobileNav()
+      }
+    })()
+  </script>
+  </body>
+</html>
